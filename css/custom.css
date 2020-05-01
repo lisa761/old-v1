@@ -35,7 +35,10 @@ h2 {
  * Small Screen
  */
 @media only screen and (max-width: 768px) {
-
+  /*#sidebar {
+    height: 682.5px;
+    overflow: hidden;
+  }*/
 }
 
 #bottom-bar .post-action-nav {
