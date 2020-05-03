@@ -35,16 +35,8 @@ h2 {
  * Small Screen
  */
 @media only screen and (max-width: 768px) {
-  /*#main {
-    height: 670px;  
-    overflow-y: auto;
-  }*/
-  /*#sidebar {
-    height: 670px;  
-    overflow-y: auto;
-  }*/
-  #sidebar .sidebar-container {
-    height: 100%;
+  #main[data-behavior="1"].pushed {
+    position: fixed;
   }
 }
 
