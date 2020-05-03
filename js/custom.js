@@ -1,19 +1,11 @@
-// swipeSidebarToRight: function () {
-// 	var t = this;
-// 	this.$sidebar.hasClass("pushed") || this.$sidebar.hasClass("processing") || (this.$sidebar.addClass("processing pushed"), 
-// 		this.$body.css("position": "fixed"), setTimeout(function () {
-// 		t.$sidebar.removeClass("processing")
-// 	}, 250))
-// }
+// var height = screen.height;
+// console.log(height);
+// // $('body').css('background-color', 'black');
 
-// swipeSidebarToRight: function () {
-// 	var t = this;
-console.log("HERE");
+// // function()
 
-	// if $('#sidebar').hasClass("pushed") {
-	// 	console.log("True");
-	// 	$(body).css("position": "fixed");
-	// }
-// }
-
-
+// if($('#sidebar').hasClass('pushed')) {
+// 	console.log('true');
+// 	$('body').css('position', 'fixed');
+// 	// $('body').css('background-color', 'black');
+// } else console.log('false');
