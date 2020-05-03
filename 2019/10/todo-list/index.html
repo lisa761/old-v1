@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="Tranquilpeak integrate a unique &ldquo;cover image&rdquo; feature. Open this post to see how this feature sublimate your article.">
+<meta name="description" content="A To-do List web app integrated with a database, to keep track of all your tasks.">
 
 
-<meta property="og:description" content="Tranquilpeak integrate a unique &ldquo;cover image&rdquo; feature. Open this post to see how this feature sublimate your article.">
+<meta property="og:description" content="A To-do List web app integrated with a database, to keep track of all your tasks.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Todo List">
 <meta name="twitter:title" content="Todo List">
 <meta property="og:url" content="https://lisa761.github.io/2019/10/todo-list/">
 <meta property="twitter:url" content="https://lisa761.github.io/2019/10/todo-list/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="Tranquilpeak integrate a unique &ldquo;cover image&rdquo; feature. Open this post to see how this feature sublimate your article.">
-<meta name="twitter:description" content="Tranquilpeak integrate a unique &ldquo;cover image&rdquo; feature. Open this post to see how this feature sublimate your article.">
+<meta property="og:description" content="A To-do List web app integrated with a database, to keep track of all your tasks.">
+<meta name="twitter:description" content="A To-do List web app integrated with a database, to keep track of all your tasks.">
 <meta property="og:locale" content="en-us">
 
   
@@ -38,6 +38,14 @@
     
       <meta property="article:tag" content="web">
     
+      <meta property="article:tag" content="javascript">
+    
+      <meta property="article:tag" content="mongoose">
+    
+      <meta property="article:tag" content="express">
+    
+      <meta property="article:tag" content="jQuery">
+    
   
 
 
@@ -49,12 +57,12 @@
 
 
 
-  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
-  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
+  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588445981/Personal%20Blog/Todo-List/1_Er24qsvJdqLofK-sK0QzpA_rkqwck.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588445981/Personal%20Blog/Todo-List/1_Er24qsvJdqLofK-sK0QzpA_rkqwck.jpg">
 
 
-  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
-  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
+  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588446031/Personal%20Blog/Todo-List/94735-istock-863607936_qpmr0c.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588446031/Personal%20Blog/Todo-List/94735-istock-863607936_qpmr0c.jpg">
 
 
 
@@ -246,7 +254,7 @@
   <div class="post-header-cover
               text-center
               "
-       style="background-image:url('//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg')"
+       style="background-image:url('https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588446031/Personal%20Blog/Todo-List/94735-istock-863607936_qpmr0c.jpg')"
        data-behavior="4">
     
   </div>
@@ -289,13 +297,45 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Tranquilpeak integrate a unique &ldquo;cover image&rdquo; feature. Open this post to see how this feature sublimate your article.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae velit eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae libero pharetra adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam. Ut nec velit dolor. Proin eget leo lobortis, aliquam est sed, mollis mauris. Fusce vitae leo pretium massa accumsan condimentum. Fusce malesuada gravida lectus vel vulputate. Donec bibendum porta nibh ut aliquam.
-Sed lorem felis, congue non fringilla eu, aliquam eu eros. Curabitur orci libero, mollis sed semper vitae, adipiscing in lectus. Aenean non egestas odio. Donec sollicitudin nisi quis lorem gravida, in pharetra mauris fringilla. Duis sit amet faucibus dolor, id aliquam neque. In egestas, odio gravida tempor dictum, mauris felis faucibus purus, sit amet commodo lacus diam vitae est. Ut ut quam eget massa semper sodales. Aenean non ipsum cursus, blandit lectus in, ornare odio. Curabitur ultrices porttitor vulputate.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae velit eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae libero pharetra adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam. Ut nec velit dolor. Proin eget leo lobortis, aliquam est sed, mollis mauris. Fusce vitae leo pretium massa accumsan condimentum. Fusce malesuada gravida lectus vel vulputate. Donec bibendum porta nibh ut aliquam.</p>
-<p>Sed lorem felis, congue non fringilla eu, aliquam eu eros. Curabitur orci libero, mollis sed semper vitae, adipiscing in lectus. Aenean non egestas odio. Donec sollicitudin nisi quis lorem gravida, in pharetra mauris fringilla. Duis sit amet faucibus dolor, id aliquam neque. In egestas, odio gravida tempor dictum, mauris felis faucibus purus, sit amet commodo lacus diam vitae est. Ut ut quam eget massa semper sodales. Aenean non ipsum cursus, blandit lectus in, ornare odio. Curabitur ultrices porttitor vulputate.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae velit eleifend interdum at ac nisi. In nec ligula lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu cursus erat, ut dapibus quam. Aliquam eleifend dolor vitae libero pharetra adipiscing. Etiam adipiscing dolor a quam tempor, eu convallis nulla varius. Aliquam sollicitudin risus a porta aliquam. Ut nec velit dolor. Proin eget leo lobortis, aliquam est sed, mollis mauris. Fusce vitae leo pretium massa accumsan condimentum. Fusce malesuada gravida lectus vel vulputate. Donec bibendum porta nibh ut aliquam.</p>
-<p>Sed lorem felis, congue non fringilla eu, aliquam eu eros. Curabitur orci libero, mollis sed semper vitae, adipiscing in lectus. Aenean non egestas odio. Donec sollicitudin nisi quis lorem gravida, in pharetra mauris fringilla. Duis sit amet faucibus dolor, id aliquam neque. In egestas, odio gravida tempor dictum, mauris felis faucibus purus, sit amet commodo lacus diam vitae est. Ut ut quam eget massa semper sodales. Aenean non ipsum cursus, blandit lectus in, ornare odio. Curabitur ultrices porttitor vulputate.</p>
+              <p>A To-do List web app integrated with a database, to keep track of all your tasks.</p>
+<p>This web application presents a simple interface to manage your daily tasks. Any user can add a list of their tasks, and cross them or delete them once finished.</p>
+<p><img src="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588449519/Personal%20Blog/Todo-List/2020-05-03_2_sd1mw7.png" alt="image"></p>
+<h2 id="tech-stack">Tech Stack</h2>
+<ul>
+<li><a href="https://www.mongodb.com/">MongoDB</a></li>
+<li><a href="https://nodejs.org/en/">Node.js</a></li>
+<li><a href="https://expressjs.com/">Express</a></li>
+<li><a href="https://jquery.com/">jQuery</a></li>
+</ul>
+<p>The database is maintained through MongoDB. It needs to be individually connected for each user in order to maintain privacy. Node.js is used for the backend to maintain the routing and the database. The backend is implemented using the Express framework for Node.js.</p>
+<h2 id="implementation">Implementation</h2>
+<p>The input text invokes the <code>post</code> rout on the router, which then creates a new to-do and adds it to the database.</p>
+<pre><code>app.post(&quot;/&quot;, function(req, res) {
+	Todo.create(req.body.Todo, function(err, todo) {
+		if(err) {
+			console.log(err);
+		} else {
+			res.redirect(&quot;/&quot;);
+		}
+	})
+});
+</code></pre><p>A trash can icon appears on hovering over any of the to-dos. Clicking it fires off the <code>delete</code> route which deletes that particular to-do.</p>
+<pre><code>app.delete(&quot;/:id&quot;, function(req, res) {
+	Todo.findByIdAndRemove(req.params.id, function(err) {
+		if(err) {
+			console.log(err);
+		} else {
+			res.redirect(&quot;/&quot;);
+		}
+	})
+});
+</code></pre><div class="alert success no-icon ">
+  <p><strong>Repo</strong>: <a href="https://github.com/lisa761/Todo-List">https://github.com/lisa761/Todo-List</a></p>
+</div>
+<h2 id="demo">Demo</h2>
+<div class="alert success no-icon ">
+  <p>🌒 <a href="https://todo-list761.herokuapp.com/">Click here</a> for the live Demo.</p>
+</div>
               
             </div>
           </div>
@@ -308,6 +348,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna vitae v
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
   <a class="tag tag--primary tag--small" href="https://lisa761.github.io/tags/web/">web</a>
+
+  <a class="tag tag--primary tag--small" href="https://lisa761.github.io/tags/javascript/">javascript</a>
+
+  <a class="tag tag--primary tag--small" href="https://lisa761.github.io/tags/mongoose/">mongoose</a>
+
+  <a class="tag tag--primary tag--small" href="https://lisa761.github.io/tags/express/">express</a>
+
+  <a class="tag tag--primary tag--small" href="https://lisa761.github.io/tags/jquery/">jQuery</a>
 
                   </div>
                 

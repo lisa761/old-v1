@@ -6,10 +6,19 @@
     <description>Recent content in javascript on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lisa761.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Todo List</title>
+      <link>https://lisa761.github.io/2019/10/todo-list/</link>
+      <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/2019/10/todo-list/</guid>
+      <description>&lt;p&gt;A To-do List web app integrated with a database, to keep track of all your tasks.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Patatap Clone</title>

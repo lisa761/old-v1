@@ -51,8 +51,8 @@
 
 
 
-  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588441602/Personal%20Blog/Patatap%20Clone/2020-05-02_12_xugziq.png">
-  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588441602/Personal%20Blog/Patatap%20Clone/2020-05-02_12_xugziq.png">
+  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588491957/Personal%20Blog/Patatap%20Clone/2020-05-03_6_poqksr.png">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588491957/Personal%20Blog/Patatap%20Clone/2020-05-03_6_poqksr.png">
 
 
   <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588441691/Personal%20Blog/Patatap%20Clone/Patatap_wdshvs_iiyfve.jpg">
@@ -301,18 +301,18 @@
 <p>Paper.js is used to create the circles whereas Howler.js is used to play the assigned sound for eack key.</p>
 <h2 id="implementation">Implementation</h2>
 <p>A circles array is generated in the beginning. Every time a key is pressed, a new circle is created at a random point and pushed to the array. The array is used to keep track of all the circles present on the screen at any given time, so as to decrease their size to <code>0.9 * original</code> and increment the <code>hue</code> by a value of <code>1</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">function</span> onFrame<span style="color:#f92672">(</span>event<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-	<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span>var i <span style="color:#f92672">=</span> 0; i &lt; circles.length; i++<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		circles<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.fillColor.hue +<span style="color:#f92672">=</span> 1;
-		circles<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.scale<span style="color:#f92672">(</span>.9<span style="color:#f92672">)</span>;
-		<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>circles<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.area &lt; 1<span style="color:#f92672">){</span>
-		    circles<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>.remove<span style="color:#f92672">()</span>; // remove the circle from the canvas
-		    circles.splice<span style="color:#f92672">(</span>i, 1<span style="color:#f92672">)</span>; // remove the circle from the array
-		    console.log<span style="color:#f92672">(</span>circles<span style="color:#f92672">)</span>;
-		<span style="color:#f92672">}</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>Once the size becomes less than <code>1</code>, the circle is removed from the array.</p>
+<pre><code>function onFrame(event) {
+	for(var i = 0; i &lt; circles.length; i++) {
+		circles[i].fillColor.hue += 1;
+		circles[i].scale(.9);
+		if(circles[i].area &lt; 1){
+		    circles[i].remove(); // remove the circle from the canvas
+		    circles.splice(i, 1); // remove the circle from the array
+		    console.log(circles);
+		}
+	}
+}
+</code></pre><p>Once the size becomes less than <code>1</code>, the circle is removed from the array.</p>
 <div class="alert success no-icon ">
   <p><strong>Repo</strong>: <a href="https://github.com/lisa761/Patatap-Clone">https://github.com/lisa761/Patatap-Clone</a></p>
 </div>
