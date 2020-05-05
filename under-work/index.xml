@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Under-works on Lisa Chandra</title>
+    <link>https://lisa761.github.io/under-work/</link>
+    <description>Recent content in Under-works on Lisa Chandra</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://lisa761.github.io/under-work/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CovidAssist</title>
+      <link>https://lisa761.github.io/under-work/covidassist/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/under-work/covidassist/</guid>
+      <description>&lt;p&gt;Tranquilpeak integrate a unique &amp;ldquo;cover image&amp;rdquo; feature. Open this post to see how this feature sublimate your article.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -30,9 +30,27 @@
     </item>
     
     <item>
+      <title>authentication</title>
+      <link>https://lisa761.github.io/tags/authentication/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>authorization</title>
+      <link>https://lisa761.github.io/tags/authorization/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/authorization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>express</title>
       <link>https://lisa761.github.io/tags/express/</link>
-      <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://lisa761.github.io/tags/express/</guid>
       <description></description>
@@ -41,9 +59,63 @@
     <item>
       <title>javascript</title>
       <link>https://lisa761.github.io/tags/javascript/</link>
-      <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://lisa761.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://lisa761.github.io/tags/nodejs/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>session</title>
+      <link>https://lisa761.github.io/tags/session/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/session/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://lisa761.github.io/tags/database/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mongoose</title>
+      <link>https://lisa761.github.io/tags/mongoose/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/mongoose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>REST</title>
+      <link>https://lisa761.github.io/tags/rest/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/rest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>semantic-ui</title>
+      <link>https://lisa761.github.io/tags/semantic-ui/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/semantic-ui/</guid>
       <description></description>
     </item>
     
@@ -53,15 +125,6 @@
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://lisa761.github.io/tags/jquery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mongoose</title>
-      <link>https://lisa761.github.io/tags/mongoose/</link>
-      <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://lisa761.github.io/tags/mongoose/</guid>
       <description></description>
     </item>
     

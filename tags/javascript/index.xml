@@ -6,10 +6,28 @@
     <description>Recent content in javascript on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lisa761.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>YelpCamp</title>
+      <link>https://lisa761.github.io/2019/11/yelpcamp/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/2019/11/yelpcamp/</guid>
+      <description>&lt;p&gt;A website that brings together all available campgrounds with user reviews so you can select the best from the best.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Blog App</title>
+      <link>https://lisa761.github.io/2019/11/blog-app/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/2019/11/blog-app/</guid>
+      <description>&lt;p&gt;A web application that implements RESTful routing to maintain your Blogs. You can create/edit/delete/update your blog whenever you wish to, on the click of a button.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Todo List</title>
@@ -17,7 +35,7 @@
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://lisa761.github.io/2019/10/todo-list/</guid>
-      <description>&lt;p&gt;A To-do List web app integrated with a database, to keep track of all your tasks.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A To-do List web application integrated with a database, to keep track of all your tasks.&lt;/p&gt;</description>
     </item>
     
     <item>

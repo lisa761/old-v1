@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="A To-do List web app integrated with a database, to keep track of all your tasks.">
+<meta name="description" content="A To-do List web application integrated with a database, to keep track of all your tasks.">
 
 
-<meta property="og:description" content="A To-do List web app integrated with a database, to keep track of all your tasks.">
+<meta property="og:description" content="A To-do List web application integrated with a database, to keep track of all your tasks.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Todo List">
 <meta name="twitter:title" content="Todo List">
 <meta property="og:url" content="https://lisa761.github.io/2019/10/todo-list/">
 <meta property="twitter:url" content="https://lisa761.github.io/2019/10/todo-list/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="A To-do List web app integrated with a database, to keep track of all your tasks.">
-<meta name="twitter:description" content="A To-do List web app integrated with a database, to keep track of all your tasks.">
+<meta property="og:description" content="A To-do List web application integrated with a database, to keep track of all your tasks.">
+<meta name="twitter:description" content="A To-do List web application integrated with a database, to keep track of all your tasks.">
 <meta property="og:locale" content="en-us">
 
   
@@ -131,7 +131,7 @@
         </a>
         <h4 class="sidebar-profile-name">Lisa Chandra</h4>
         
-          <h5 class="sidebar-profile-bio">Enthusiatic Learner</h5>
+          <h5 class="sidebar-profile-bio">Enthusiastic Learner</h5>
         
       </div>
     
@@ -297,8 +297,8 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>A To-do List web app integrated with a database, to keep track of all your tasks.</p>
-<p>This web application presents a simple interface to manage your daily tasks. Any user can add a list of their tasks, and cross them or delete them once finished.</p>
+              <p>A To-do List web application integrated with a database, to keep track of all your tasks.</p>
+<p>This web application presents a simple interface to manage your daily tasks. Any user can add a list of their tasks, and cross them or delete them once finished. The page is rendered dynamically to show all the to-dos that have been saved by a user.</p>
 <p><img src="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588449519/Personal%20Blog/Todo-List/2020-05-03_2_sd1mw7.png" alt="image"></p>
 <h2 id="tech-stack">Tech Stack</h2>
 <ul>
@@ -307,7 +307,7 @@
 <li><a href="https://expressjs.com/">Express</a></li>
 <li><a href="https://jquery.com/">jQuery</a></li>
 </ul>
-<p>The database is maintained through MongoDB. It needs to be individually connected for each user in order to maintain privacy. Node.js is used for the backend to maintain the routing and the database. The backend is implemented using the Express framework for Node.js.</p>
+<p>The database is maintained through MongoDB. It needs to be individually connected for each user to maintain privacy. Node.js is used for the backend to maintain the routing and the database. The backend is implemented using the Express framework for Node.js.</p>
 <h2 id="implementation">Implementation</h2>
 <p>The input text invokes the <code>post</code> rout on the router, which then creates a new to-do and adds it to the database.</p>
 <pre><code>app.post(&quot;/&quot;, function(req, res) {
@@ -329,12 +329,13 @@
 		}
 	})
 });
-</code></pre><div class="alert success no-icon ">
+</code></pre><p>There is another option to cross any finished to-do by clicking on the to-do. This is implemented in the front-end using javascript.</p>
+<div class="alert success no-icon ">
   <p><strong>Repo</strong>: <a href="https://github.com/lisa761/Todo-List">https://github.com/lisa761/Todo-List</a></p>
 </div>
 <h2 id="demo">Demo</h2>
 <div class="alert success no-icon ">
-  <p>🌒 <a href="https://todo-list761.herokuapp.com/">Click here</a> for the live Demo.</p>
+  <p>🌒 <a href="https://todo-list761.herokuapp.com/">Click here</a> for the Live Demo.</p>
 </div>
               
             </div>
@@ -568,7 +569,7 @@
     
     <h4 id="about-card-name">Lisa Chandra</h4>
     
-      <div id="about-card-bio">Enthusiatic Learner</div>
+      <div id="about-card-bio">Enthusiastic Learner</div>
     
     
       <div id="about-card-job">
