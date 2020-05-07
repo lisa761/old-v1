@@ -6,18 +6,18 @@
     <description>Recent content in app on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lisa761.github.io/tags/app/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>CovidAssist</title>
-      <link>https://lisa761.github.io/under-work/covidassist/</link>
-      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <title></title>
+      <link>https://lisa761.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/under-work/covidassist/</guid>
-      <description>&lt;p&gt;Tranquilpeak integrate a unique &amp;ldquo;cover image&amp;rdquo; feature. Open this post to see how this feature sublimate your article.&lt;/p&gt;</description>
+      <guid>https://lisa761.github.io/about/</guid>
+      <description>About Me I am a second-year undergraduate, pursuing Computer Science Engineering at Indira Gandhi Delhi Technical University for Women.
+I have a fair amount of experience with web development and have used it to create several projects. I also have a keen interest in Machine Learning and Artificial Intelligence and am actively working to learn more about them as I go. I constantly push myself to learn more and do better.</description>
     </item>
     
   </channel>

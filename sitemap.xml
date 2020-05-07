@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://lisa761.github.io/tags/app/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lisa761.github.io/categories/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://lisa761.github.io/under-work/covidassist/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
   </url>
@@ -23,22 +13,7 @@
   </url>
   
   <url>
-    <loc>https://lisa761.github.io/categories/projects/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lisa761.github.io/tags/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://lisa761.github.io/under-work/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lisa761.github.io/tags/web/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -49,6 +24,11 @@
   
   <url>
     <loc>https://lisa761.github.io/tags/authorization/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/categories/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -73,7 +53,22 @@
   </url>
   
   <url>
+    <loc>https://lisa761.github.io/categories/projects/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lisa761.github.io/tags/session/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/tags/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/tags/web/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -124,6 +119,10 @@
   
   <url>
     <loc>https://lisa761.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/tags/app/</loc>
   </url>
   
   <url>
