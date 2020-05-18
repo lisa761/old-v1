@@ -3,12 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://lisa761.github.io/under-work/covidassist/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
+    <loc>https://lisa761.github.io/categories/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/tags/gsoc/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/categories/gsoc/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/2020/05/gsoc-2020/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://lisa761.github.io/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/tags/openrefine/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/tags/opensource/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/post/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/tags/</loc>
+    <lastmod>2020-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lisa761.github.io/under-work/covidassist/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -28,11 +68,6 @@
   </url>
   
   <url>
-    <loc>https://lisa761.github.io/categories/</loc>
-    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://lisa761.github.io/tags/express/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
   </url>
@@ -48,22 +83,12 @@
   </url>
   
   <url>
-    <loc>https://lisa761.github.io/post/</loc>
-    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://lisa761.github.io/categories/projects/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://lisa761.github.io/tags/session/</loc>
-    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://lisa761.github.io/tags/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
   </url>
   

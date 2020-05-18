@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lisa761.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>gsoc</title>
+      <link>https://lisa761.github.io/tags/gsoc/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/gsoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openrefine</title>
+      <link>https://lisa761.github.io/tags/openrefine/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/openrefine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opensource</title>
+      <link>https://lisa761.github.io/tags/opensource/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/tags/opensource/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>authentication</title>

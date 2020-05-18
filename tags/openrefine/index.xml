@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openrefine on Lisa Chandra</title>
+    <link>https://lisa761.github.io/tags/openrefine/</link>
+    <description>Recent content in openrefine on Lisa Chandra</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://lisa761.github.io/tags/openrefine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GSoC 2020</title>
+      <link>https://lisa761.github.io/2020/05/gsoc-2020/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/2020/05/gsoc-2020/</guid>
+      <description>&lt;p&gt;This blog covers my journey of getting selected for Google Summer of Code 2020.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
