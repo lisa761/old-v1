@@ -75,6 +75,12 @@ setInterval(function() {
 		code.forEach(function(cod) {
 			cod.style.backgroundColor = "#f7f8f8";
 		});
+		bottomActions.forEach(function(actions) {
+			actions.style.backgroundColor = "#fff";
+		});
+		tags.forEach(function(tag) {
+			tag.style.backgroundColor = "#fff";
+		});
 	}
 }, 100);
 // setInterval(function() { 
