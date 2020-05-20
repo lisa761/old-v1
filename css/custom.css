@@ -6,6 +6,48 @@ ul {
   margin-top: 20px;
 }
 
+h5 {
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+.toggle-light {
+  background-color: Transparent; 
+  border: none; 
+  outline: none;
+}
+
+.toggle-light:hover {
+  cursor: pointer;
+}
+
+#toggle-light {
+  font-size: 2.5rem; 
+  color: #ebebeb;
+}
+
+#sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-bio {
+  font-size: 1.5rem;
+}
+
+#sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-name {
+  font-size: 1.6em;
+  letter-spacing: 0.01em;
+}
+
+#sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-bio {
+  font-size: 1.5rem;
+}
+
+#sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-name {
+  font-size: 1.6em;
+  letter-spacing: 0.01em;
+}
+
 /*
  * Big Screen
  */
@@ -22,6 +64,26 @@ ul {
   #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-picture:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
+  #sidebar[data-behavior="1"] .sidebar-profile {
+    padding-top: 20px;
+  }
+  #sidebar[data-behavior="4"] .sidebar-profile {
+    padding-top: 20px;
+  }
+}
+/*
+ * Between Big and Medium Screen
+ */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  #sidebar[data-behavior="1"] .sidebar-profile {
+    height: 160px;
+  }
+  #sidebar[data-behavior="4"] .sidebar-profile {
+    height: 160px;
+  }
+  .toggle-light {
+    margin-top: auto;
+  }
 }
 /*
  * Medium Screen
@@ -34,6 +96,25 @@ ul {
   #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-picture:hover {
     box-shadow: 0 10px 26px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
   }
+  #sidebar[data-behavior="1"] .sidebar-profile {
+    /*height: 160px;*/
+  }
+  #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-name {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-name {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+/*
+ * Between Medium and Small Screen
+ */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .toggle-light {
+    margin-top: 25px;
+  }
 }
 /*
  * Small Screen
@@ -41,6 +122,13 @@ ul {
 @media only screen and (max-width: 768px) {
   #main.pushed {
     position: fixed;
+  }
+  #sidebar[data-behavior="1"] .sidebar-profile {
+    height: 160px;
+  }
+  #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-name {
+    margin-top: 8px;
+    margin-bottom: 10px;
   }
 }
 
