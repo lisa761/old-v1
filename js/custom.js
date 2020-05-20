@@ -76,7 +76,7 @@ setInterval(function() {
 			cod.style.backgroundColor = "#f7f8f8";
 		});
 	}
-}, 500);
+}, 100);
 // setInterval(function() { 
 // 	console.log(sessionStorage.getItem('day'));
 // }, 1000);
