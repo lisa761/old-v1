@@ -71,7 +71,7 @@ setInterval(function() {
 	} else {
 		main.style.backgroundColor = "#fff";
 		header.style.backgroundColor = "#fff";
-		footer.style.backgroundColor = "#fff";
+		if(footer) footer.style.backgroundColor = "#fff";
 		code.forEach(function(cod) {
 			cod.style.backgroundColor = "#f7f8f8";
 		});
