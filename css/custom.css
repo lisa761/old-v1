@@ -25,7 +25,7 @@ h4 {
   cursor: pointer;
 }
 
-#toggle-light {
+.toggle-icons {
   font-size: 2.5rem; 
   color: #ebebeb;
 }

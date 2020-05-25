@@ -6,9 +6,6 @@ var toggleLightIconSlider = document.querySelector("#toggle-light-slider");
 var main = document.querySelector("#main");
 var header = document.querySelector(".header-title");
 var footer = document.querySelector("#bottom-bar");
-var code = document.querySelectorAll("code");
-var bottomActions = document.querySelectorAll(".post-action-btn");
-var tags = document.querySelectorAll(".tag");
 
 toggleLight.addEventListener("click", function() {
 	// console.log("CLICKED!");
@@ -30,34 +27,34 @@ setInterval(function() {
 		main.style.backgroundColor = "#181818";
 		header.style.backgroundColor = "#181818";
 		if(footer) footer.style.backgroundColor = "#181818";
-		code.forEach(function(cod) {
-			if(cod.classList.contains("codeblock")) {
-				cod.style.backgroundColor = "#9eabb3";
-			}
-			else {
-				cod.style.backgroundColor = "rgb(21, 32, 43)";
-			}
-		});
-		bottomActions.forEach(function(actions) {
-			actions.style.backgroundColor = "rgb(21, 32, 43)";
-		});
-		tags.forEach(function(tag) {
-			tag.style.backgroundColor = "rgb(21, 32, 43)";
-		});
+
+		$('code.codeblock').css('background-color', '#9eabb3');
+		$('code:not(.codeblock)').css('background-color', 'rgb(21, 32, 43)');
+		$('.post-action-btn').css('background-color', 'rgb(21, 32, 43)');
+		$('.tag').css('background-color', 'rgb(21, 32, 43)');
+
+		$('p').css('font-family', 'Merriweather,serif');
+		$('p').css('color', '#767D92');
+		$('ul').css('color', '#767D92');
+		$('h1').css('color', '#9098b0');
+		$('h2').css('color', '#9098b0');
+		$('h3').css('color', '#9098b0');
 	} else {
 		toggleLightIconSlider.classList.add("fa-toggle-off");
 		toggleLightIconSlider.classList.remove("fa-toggle-on");
 		main.style.backgroundColor = "#fff";
 		header.style.backgroundColor = "#fff";
 		if(footer) footer.style.backgroundColor = "#fff";
-		code.forEach(function(cod) {
-			cod.style.backgroundColor = "#f7f8f8";
-		});
-		bottomActions.forEach(function(actions) {
-			actions.style.backgroundColor = "#fff";
-		});
-		tags.forEach(function(tag) {
-			tag.style.backgroundColor = "#fff";
-		});
+
+		$('code').css('background-color', '#f7f8f8');
+		$('.post-action-btn').css('background-color', '#fff');
+		$('.tag').css('background-color', '#fff');
+
+		$('p').css('font-family', 'Merriweather,serif');
+		$('p').css('color', '#5d686f');
+		$('ul').css('color', '#5d686f');
+		$('h1').css('color', '#4a4a4a');
+		$('h2').css('color', '#4a4a4a');
+		$('h3').css('color', '#4a4a4a');
 	}
 }, 100);
