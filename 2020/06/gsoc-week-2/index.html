@@ -303,10 +303,10 @@ To explain it better, once the row has been selected, even removing the selectio
 <h2 id="bugs">Bugs</h2>
 <ul>
 <li>
-<p>The first problem was that the scrollbar height did not work for records mode. The <code>sizeTotal</code> variable only kept in check the total number of rows in row mode. And hence when the mode was changed to record, the height reflected the huge reduce in number of records (from total rows). This was easy to fix by changing the <code>this._sizeRowsTotal = this._sizeRowFirst * theProject.rowModel.total;</code> to <code>this._sizeRowsTotal = this._sizeRowFirst * theProject.metadata.rowCount;</code>. This ensured that the toal height only depends on the total number of rows and not the mode.</p>
+<p>The first problem was that the scrollbar height did not work for records mode. The <code>sizeTotal</code> variable only kept in check the total number of rows in row mode. And hence when the mode was changed to record, the height reflected the huge reduction in number of records (from total rows). This was easy to fix by changing the <code>this._sizeRowsTotal = this._sizeRowFirst * theProject.rowModel.total;</code> to <code>this._sizeRowsTotal = this._sizeRowFirst * theProject.metadata.rowCount;</code>. This ensured that the toal height only depends on the total number of rows and not the mode.</p>
 </li>
 <li>
-<p>The second problem was the adding of last row. The last row was added to the table even if we all the rows were already loaded and there was no requirement for a row to provide additional height. This was solved by adding an <code>if</code> condition to check if the total number of rows are already present before inserting a new last row.</p>
+<p>The second problem was the adding of last row. The last row was added to the table even if all the rows were already loaded and there was no requirement for a row to provide additional height. This was solved by adding an <code>if</code> condition to check if the total number of rows are already present before inserting a new last row.</p>
 </li>
 </ul>
 <pre><code>if(self._totalSize &lt; theProject.rowModel.total) {
@@ -315,7 +315,7 @@ To explain it better, once the row has been selected, even removing the selectio
   $('tr:last').addClass('last-row');
 }
 </code></pre><ul>
-<li>The next bug was that reaching the end of dataset, kept deleting rows from the end. This was a pretty weird bug, but I soon realized it&rsquo;s because of the delete row operation to delete the <code>last-row</code> provided for additional height. There wasn&rsquo;t a check placed to make sure that there even was a <code>last-row</code> class row. This was solved by not calling the <code>showRowsBottom()</code> once all the rows were loaded.</li>
+<li>The next bug was that reaching the end of the dataset, kept deleting rows from the end. This was pretty weird, but I soon realized it&rsquo;s because of the delete row operation to delete the <code>last-row</code> provided for additional height. There wasn&rsquo;t a check placed to make sure that there even was a <code>last-row</code> class row. This was solved by not calling the <code>showRowsBottom()</code> once all the rows were loaded.</li>
 </ul>
 <pre><code>DataTableView.prototype._onBottomTable = function(table, elmt, evt) {
   if(this._totalSize &lt; theProject.rowModel.total) {
@@ -323,7 +323,7 @@ To explain it better, once the row has been selected, even removing the selectio
   }
 };
 </code></pre><h2 id="table-refactor">Table Refactor</h2>
-<p>The <a href="https://github.com/OpenRefine/OpenRefine/pull/2422">first PR</a> for Table Refactoring had dealt with most of the work that was required. Which was to move the header container and the table body into the same table using <code>&lt;thead&gt;</code>. This refacoring solves issues around some reflow events cause by resizing the columns and rows and keeping these columns in sync witht the data table. This also ensures that any changes applied to the table body is automatically reflected into the header.</p>
+<p>The <a href="https://github.com/OpenRefine/OpenRefine/pull/2422">first PR</a> for Table Refactoring had dealt with most of the work that was required. Which was to move the header container and the table body into the same table using <code>&lt;thead&gt;</code>. This refacoring solves issues around some reflow events caused by resizing the columns and rows. It also keeps these columns in sync with the data table. This also ensures that any changes applied to the table body is automatically reflected in header.</p>
 <p>I finished off this PR <a href="https://github.com/OpenRefine/OpenRefine/pull/2719">here</a>. There were some styling issues, most pertaining to Firefox bugs that needed to be fixed in addition to including a fixed header. Right now only the column with <code>column-header</code> class, or the one with the column names are fixed. The entire group of columns which are rendered in XML/JSON file types (for the node structure) are not fixed. This is something that I am thinking of adding in a separate PR, so as to move ahead with the changes that the project code requires once the table moves into a single conntainer.</p>
               
             </div>
