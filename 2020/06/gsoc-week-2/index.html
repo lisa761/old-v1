@@ -8,37 +8,39 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="Patatap is a portable animation and sound kit. With the touch of a finger, you can create melodies charged with moving shapes.">
+<meta name="description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.">
 
 
-<meta property="og:description" content="Patatap is a portable animation and sound kit. With the touch of a finger, you can create melodies charged with moving shapes.">
+<meta property="og:description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Patatap Clone">
-<meta name="twitter:title" content="Patatap Clone">
-<meta property="og:url" content="https://lisa761.github.io/2019/10/patatap-clone/">
-<meta property="twitter:url" content="https://lisa761.github.io/2019/10/patatap-clone/">
+<meta property="og:title" content="GSoC Week: 2">
+<meta name="twitter:title" content="GSoC Week: 2">
+<meta property="og:url" content="https://lisa761.github.io/2020/06/gsoc-week-2/">
+<meta property="twitter:url" content="https://lisa761.github.io/2020/06/gsoc-week-2/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="Patatap is a portable animation and sound kit. With the touch of a finger, you can create melodies charged with moving shapes.">
-<meta name="twitter:description" content="Patatap is a portable animation and sound kit. With the touch of a finger, you can create melodies charged with moving shapes.">
+<meta property="og:description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.">
+<meta name="twitter:description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2019-10-01T00:00:00">
+    <meta property="article:published_time" content="2020-06-14T00:00:00">
   
   
-    <meta property="article:modified_time" content="2019-10-01T00:00:00">
+    <meta property="article:modified_time" content="2020-06-14T00:00:00">
   
-  
-  
-    
-      <meta property="article:section" content="projects">
-    
   
   
     
-      <meta property="article:tag" content="web">
+      <meta property="article:section" content="gsoc">
     
-      <meta property="article:tag" content="javascript">
+  
+  
+    
+      <meta property="article:tag" content="gsoc">
+    
+      <meta property="article:tag" content="opensource">
+    
+      <meta property="article:tag" content="openrefine">
     
   
 
@@ -51,12 +53,9 @@
 
 
 
-  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588491957/Personal%20Blog/Patatap%20Clone/2020-05-03_6_poqksr.png">
-  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588491957/Personal%20Blog/Patatap%20Clone/2020-05-03_6_poqksr.png">
+  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1592640806/Personal%20Blog/GSoC/104165675-vector-illustration-calendar-day-2-calendar-icon-_t7q4lq.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1592640806/Personal%20Blog/GSoC/104165675-vector-illustration-calendar-day-2-calendar-icon-_t7q4lq.jpg">
 
-
-  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588441691/Personal%20Blog/Patatap%20Clone/Patatap_wdshvs_iiyfve.jpg">
-  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588441691/Personal%20Blog/Patatap%20Clone/Patatap_wdshvs_iiyfve.jpg">
 
 
 
@@ -65,14 +64,14 @@
   <meta property="twitter:image" content="https://avatars0.githubusercontent.com/u/52909743?s=460&u=bdc3b24f17399aa050098c31c1fe19ec4b55bb2a&v=4">
 
 
-    <title>Patatap Clone</title>
+    <title>GSoC Week: 2</title>
 
     <link rel="icon" href="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1589453265/Personal%20Blog/2020-05-14_2_pfaw0c.png">
     
 
     
 
-    <link rel="canonical" href="https://lisa761.github.io/2019/10/patatap-clone/">
+    <link rel="canonical" href="https://lisa761.github.io/2020/06/gsoc-week-2/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -252,17 +251,9 @@
 </nav>
 
       
-  <div class="post-header-cover
-              text-center
-              "
-       style="background-image:url('https://res.cloudinary.com/dmkc6lxx2/image/upload/v1588441691/Personal%20Blog/Patatap%20Clone/Patatap_wdshvs_iiyfve.jpg')"
-       data-behavior="4">
-    
-  </div>
-
 
       <div id="main" data-behavior="4"
-        class="hasCover
+        class="
                hasCoverMetaOut
                ">
         <article class="post" itemscope itemType="http://schema.org/BlogPosting">
@@ -271,15 +262,15 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Patatap Clone
+      GSoC Week: 2
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-10-01T00:00:00Z">
+      <time itemprop="datePublished" datetime="2020-06-14T00:00:00Z">
         
-  October 1, 2019
+  June 14, 2020
 
       </time>
     
@@ -288,7 +279,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://lisa761.github.io/categories/projects">projects</a>
+      <a class="category-link" href="https://lisa761.github.io/categories/gsoc">gsoc</a>
     
   
 
@@ -298,35 +289,42 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Patatap is a portable animation and sound kit. With the touch of a finger, you can create melodies charged with moving shapes.</p>
-<p>This project is a clone of the original <a href="https://patatap.com/">Patatap Website</a>. The project uses circles of random sizes and an assigned sound to indicate the press of each alphabet key. These circles continuously decrease in size with a changing color hue until they eventually disappear. The position of these circles is randomly generated every time a key is pressed.</p>
-<h2 id="tech-stack">Tech Stack</h2>
+              <p>This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.</p>
+<h1 id="table-of-contents">Table of Contents</h1>
 <ul>
-<li><a href="http://paperjs.org/">Paper.js</a></li>
-<li><a href="https://howlerjs.com/">Howler.js</a></li>
+<li><a href="#alternative-options">Alternative Options</a></li>
+<li><a href="#bugs">Bugs</a></li>
+<li><a href="#table-refactor">Table Refactor</a></li>
 </ul>
-<p>Paper.js is used to create the circles whereas Howler.js is used to play the assigned sound for each key.</p>
-<h2 id="implementation">Implementation</h2>
-<p>A circles array is generated in the beginning. Every time a key is pressed, a new circle is created at a random point and pushed to the array. The array is used to keep track of all the circles present on the screen at any given time, so as to decrease their size to <code>0.9 * original</code> and increment the <code>hue</code> by a value of <code>1</code>.</p>
-<pre><code>function onFrame(event) {
-	for(var i = 0; i &lt; circles.length; i++) {
-		circles[i].fillColor.hue += 1;
-		circles[i].scale(.9);
-		if(circles[i].area &lt; 1){
-		    circles[i].remove(); // remove the circle from the canvas
-		    circles.splice(i, 1); // remove the circle from the array
-		    console.log(circles);
-		}
-	}
+<h2 id="alternative-options">Alternative options</h2>
+<p>The first article I found about how to check when an element comes into view was the new <a href="https://usefulangle.com/post/113/javascript-detecting-element-visible-during-scroll#:~:text=If%20we%20want%20to%20know,1%5D%20%7D">Intersection Obserever API</a>. This is a fairly new way, and has better performance than the <code>scroll</code> event functions. Another <a href="https://stackoverflow.com/questions/487073/how-to-check-if-element-is-visible-after-scrolling">Stack Overflow</a> post had the same question where Intersection API was the third most upvoted answer (Second most upvoted being the <code>getBoundingClientRect()</code>). Here&rsquo;s another <a href="https://www.smashingmagazine.com/2018/01/deferring-lazy-loading-intersection-observer-api/">article</a> that explains why Intersection API has better performance.</p>
+<p>I did end up adding it and testing how it works. But a major fallback was the fact that it cannot change selected elements. Which means, that once it&rsquo;s selected the <code>load-next-set</code> row, it wouldn&rsquo;t change to observing another element. 
+To explain it better, once the row has been selected, even removing the selection criteria, which is the <code>load-next-set</code> class and adding it to some other row wouldn&rsquo;t force the API to observe the new row instead. It would still be observing the first row to ever have the <code>load-next-set</code> class irrespective of whether it still has that class. This would not work when we add the class to a new row every time the next set of rows are loaded. Therefore, right now, in order to keep the project moving, this has been kept on hold until we finish the prototype and find a way to fix this problem.</p>
+<h2 id="bugs">Bugs</h2>
+<ul>
+<li>
+<p>The first problem was that the scrollbar height did not work for records mode. The <code>sizeTotal</code> variable only kept in check the total number of rows in row mode. And hence when the mode was changed to record, the height reflected the huge reduce in number of records (from total rows). This was easy to fix by changing the <code>this._sizeRowsTotal = this._sizeRowFirst * theProject.rowModel.total;</code> to <code>this._sizeRowsTotal = this._sizeRowFirst * theProject.metadata.rowCount;</code>. This ensured that the toal height only depends on the total number of rows and not the mode.</p>
+</li>
+<li>
+<p>The second problem was the adding of last row. The last row was added to the table even if we all the rows were already loaded and there was no requirement for a row to provide additional height. This was solved by adding an <code>if</code> condition to check if the total number of rows are already present before inserting a new last row.</p>
+</li>
+</ul>
+<pre><code>if(self._totalSize &lt; theProject.rowModel.total) {
+  document.querySelector('.data-table').insertRow(self._totalSize);
+  $('tr:last').css('height', heightToAdd);
+  $('tr:last').addClass('last-row');
 }
-</code></pre><p>Once the size becomes less than <code>1</code>, the circle is removed from the array.</p>
-<div class="alert success no-icon ">
-  <p><strong>Repo</strong>: <a href="https://github.com/lisa761/Patatap-Clone">https://github.com/lisa761/Patatap-Clone</a></p>
-</div>
-<h2 id="demo">Demo</h2>
-<div class="alert success no-icon ">
-  <p>🌒 <a href="https://lisa761.github.io/Patatap-Clone/">Click here</a> for the Live Demo.</p>
-</div>
+</code></pre><ul>
+<li>The next bug was that reaching the end of dataset, kept deleting rows from the end. This was a pretty weird bug, but I soon realized it&rsquo;s because of the delete row operation to delete the <code>last-row</code> provided for additional height. There wasn&rsquo;t a check placed to make sure that there even was a <code>last-row</code> class row. This was solved by not calling the <code>showRowsBottom()</code> once all the rows were loaded.</li>
+</ul>
+<pre><code>DataTableView.prototype._onBottomTable = function(table, elmt, evt) {
+  if(this._totalSize &lt; theProject.rowModel.total) {
+    this._showRowsBottom(table, theProject.rowModel.start + this._pageSize);
+  }
+};
+</code></pre><h2 id="table-refactor">Table Refactor</h2>
+<p>The <a href="https://github.com/OpenRefine/OpenRefine/pull/2422">first PR</a> for Table Refactoring had dealt with most of the work that was required. Which was to move the header container and the table body into the same table using <code>&lt;thead&gt;</code>. This refacoring solves issues around some reflow events cause by resizing the columns and rows and keeping these columns in sync witht the data table. This also ensures that any changes applied to the table body is automatically reflected into the header.</p>
+<p>I finished off this PR <a href="https://github.com/OpenRefine/OpenRefine/pull/2719">here</a>. There were some styling issues, most pertaining to Firefox bugs that needed to be fixed in addition to including a fixed header. Right now only the column with <code>column-header</code> class, or the one with the column names are fixed. The entire group of columns which are rendered in XML/JSON file types (for the node structure) are not fixed. This is something that I am thinking of adding in a separate PR, so as to move ahead with the changes that the project code requires once the table moves into a single conntainer.</p>
               
             </div>
           </div>
@@ -338,9 +336,11 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://lisa761.github.io/tags/web/">web</a>
+  <a class="tag tag--primary tag--small" href="https://lisa761.github.io/tags/gsoc/">gsoc</a>
 
-  <a class="tag tag--primary tag--small" href="https://lisa761.github.io/tags/javascript/">javascript</a>
+  <a class="tag tag--primary tag--small" href="https://lisa761.github.io/tags/opensource/">opensource</a>
+
+  <a class="tag tag--primary tag--small" href="https://lisa761.github.io/tags/openrefine/">openrefine</a>
 
                   </div>
                 
@@ -353,7 +353,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2019/10/todo-list/" data-tooltip="Todo List">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -361,7 +361,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-1/" data-tooltip="GSoC Week: 1">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -379,19 +379,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2019/10/patatap-clone/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/06/gsoc-week-2/">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2019/10/patatap-clone/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/06/gsoc-week-2/">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2019/10/patatap-clone/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/06/gsoc-week-2/">
               <i class="fab fa-google-plus-g"></i>
             </a>
           </li>
@@ -453,7 +453,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2019/10/todo-list/" data-tooltip="Todo List">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -461,7 +461,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-1/" data-tooltip="GSoC Week: 1">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -479,19 +479,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2019/10/patatap-clone/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/06/gsoc-week-2/">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2019/10/patatap-clone/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/06/gsoc-week-2/">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2019/10/patatap-clone/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/06/gsoc-week-2/">
               <i class="fab fa-google-plus-g"></i>
             </a>
           </li>
@@ -521,19 +521,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flisa761.github.io%2F2019%2F10%2Fpatatap-clone%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flisa761.github.io%2F2020%2F06%2Fgsoc-week-2%2F">
           <i class="fa fab fa-facebook"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flisa761.github.io%2F2019%2F10%2Fpatatap-clone%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flisa761.github.io%2F2020%2F06%2Fgsoc-week-2%2F">
           <i class="fa fab fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Flisa761.github.io%2F2019%2F10%2Fpatatap-clone%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Flisa761.github.io%2F2020%2F06%2Fgsoc-week-2%2F">
           <i class="fa fab fa-google-plus-g"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -627,9 +627,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/lisa761.github.io\/2019\/10\/patatap-clone\/';
+          this.page.url = 'https:\/\/lisa761.github.io\/2020\/06\/gsoc-week-2\/';
           
-            this.page.identifier = '\/2019\/10\/patatap-clone\/'
+            this.page.identifier = '\/2020\/06\/gsoc-week-2\/'
           
         };
         (function() {

@@ -6,10 +6,28 @@
     <description>Recent content on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lisa761.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GSoC Week: 2</title>
+      <link>https://lisa761.github.io/2020/06/gsoc-week-2/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/2020/06/gsoc-week-2/</guid>
+      <description>&lt;p&gt;This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GSoC Week: 1</title>
+      <link>https://lisa761.github.io/2020/06/gsoc-week-1/</link>
+      <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/2020/06/gsoc-week-1/</guid>
+      <description>&lt;p&gt;The first week of coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>GSoC 2020</title>
