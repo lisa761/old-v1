@@ -6,10 +6,19 @@
     <description>Recent content on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lisa761.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GSoC Week: 3 Part-I</title>
+      <link>https://lisa761.github.io/2020/06/gsoc-week-3-part-i/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/2020/06/gsoc-week-3-part-i/</guid>
+      <description>&lt;p&gt;This week, I started working on the faster scrolling aspect. This was closely related to virtual scrolling, so it was time I got into that as well.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>GSoC Week: 2</title>
@@ -93,6 +102,15 @@
       <guid>https://lisa761.github.io/about/</guid>
       <description>About Me I am a second-year undergraduate, pursuing Computer Science Engineering at Indira Gandhi Delhi Technical University for Women.
 I have a fair amount of experience with web development and have used it to create several projects. I also have a keen interest in Machine Learning and Artificial Intelligence and am actively working to learn more about them as I go. I constantly push myself to learn more and do better.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lisa761.github.io/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/1/01/</guid>
+      <description></description>
     </item>
     
     <item>
