@@ -290,10 +290,10 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>This week, I started working on the faster scrolling aspect. This was closely related to virtual scrolling, so it was time I got into that as well.</p>
-<p>Looking at other libraries that use virtual scrolling, something that seems to be common amongst them is that they keep the data loaded to front-end beforehand. This gives them an advantage to rapidly load rows as the user scrolls in a particular direction. But this was something that could not be implemented in OpenRefine, because firstly - Loading the <em>entire</em> dataset would freeze up the screen for a long time (since rendering takes up a lot of time), and secondly - the rendering wasn&rsquo;t designed to load a single row at a time and add it to the table. Although the latter is something that could be manipulated to do it, I suspect it would affect the performance. I am thinking of trying it out once the prototype is ready, to see if it could smoothen the entire process of scrolling.</p>
-<p>Right now, I have the <code>pageSize</code> set to <code>100</code>, so if the user was scrolling very fast, we could take the scroll height to fire off the rendering  functions and load the rows corresponding to that height. A thing that I noticed was: if you don&rsquo;t wait for a user to stop scrolling before firing the rendering functions, the rendering often started at a scroll position way above where the user intends to go. The problem with that is, javascript is a single thread language, so once the rendering functions start executing, there is no way to still keep track of whether a user is still scrolling or not. This meant that the rows way above the final scroll position would be loaded. A way to solve this was to execute these functions only when the user stops scrolling, or in better terms, the scroll event itself stops.</p>
-<p>I changed the scroll function to keep track of three elements, the first row, the last row and the row with class <code>last-next-set</code>. The first row was introduced to push down the rendered rows to where they would be is all the rows were loaded. Both, first-row and last-row are empty rows with no cell and therefore should not affect any operations that a user might perform, although this would require a deeper testing to confirm.</p>
-<p>So now, we wait for 1/4th of a second to check whether the user has stopped scrolling. This time worked well to give an idea of when the user has stopped scrolling.</p>
+<p>Looking at other libraries that use virtual scrolling, something that seems to be common amongst them is that they keep the data loaded to front-end beforehand. This gives them an advantage to rapidly load rows as the user scrolls in a particular direction. But this was something that could not be implemented in OpenRefine, because firstly - Loading the <em>entire</em> dataset would freeze up the screen for a long time (since rendering takes up a lot of time), and secondly - the rendering wasn&rsquo;t designed to load a single row at a time and add it to the table. Although the latter is something that could be manipulated, I suspect it would affect the performance. I am thinking of trying it out once the prototype is ready, to see if it could smoothen the entire process of scrolling.</p>
+<p>Right now, I have the <code>pageSize</code> set to <code>100</code>, so if the user was scrolling very fast, we could take the scroll position to fire off the rendering  functions and load the rows corresponding to that position. A thing that I noticed was: if you don&rsquo;t wait for a user to stop scrolling before firing the rendering functions, the rendering often starts at a scroll position way above where the user intends to go. The problem with that is, javascript is a single threaded language, so once the rendering functions start executing, there is no way to keep track of whether a user is still scrolling or not. This meant that the rows way above the final scroll position would be loaded, since rendering the rows takes up a lot of time). A way to solve this would be to execute these functions only when the user stops scrolling, or in better terms, the scroll event itself stops.</p>
+<p>I changed the scroll function to keep track of three elements, the first row, the last row and the row with class <code>load-next-set</code>. The first row was introduced to push down the rendered rows to where they would be if all the rows were loaded. Both, first-row and last-row are empty rows with no cell and therefore should not affect any operations that a user might perform, although this would require a deeper testing to confirm.</p>
+<p>So now we wait for 1/4th of a second to check whether the user has stopped scrolling.</p>
 <pre><code>$(table.parentNode.parentNode).bind('scroll', function(evt) {
     var scrollTop = $(this).scrollTop();
 
@@ -335,7 +335,7 @@
   var modifiedScrollPosition = this._sizeRowFirst * gotoPageNumber * this._pageSize;
   this._showRowsBottomSpeed(modifiedScrollPosition, scrollPosition, table, (gotoPageNumber - 1) * this._pageSize);
 };
-</code></pre><p>This function first calculates a <code>modifiedScrollPosition</code> which is the height that needs to be added to the first row of loaded set. It&rsquo;s modified in the sense that it calculates the height of first row using the predicted <code>singlePageSize</code> and then finding out how much space the given number of pages would have required.</p>
+</code></pre><p>This function first calculates a <code>modifiedScrollPosition</code> which is the height that needs to be added to the first row of loaded set. It&rsquo;s modified in the sense that it calculates the height of first row using the predicted <code>singlePageSize</code> and then finds out how much space the given number of pages would have required.</p>
 <pre><code>DataTableView.prototype._showRowsBottomSpeed = function(modifiedScrollPosition, scrollPosition, table, start, onDone) {
   var self = this;
 
@@ -354,7 +354,7 @@
     }
   }, this._sorting);
 };
-</code></pre><p><code>showRowsBottomSpeed</code> is pretty similar to <code>showRowsBottom</code> with addition of a new adjust classes, and the scrolling position which needs to be set back to where it was before the rows were loaded.</p>
+</code></pre><p><code>showRowsBottomSpeed</code> is pretty similar to <code>showRowsBottom</code> with addition of a new <code>adjustNextSetClasses</code> and the scrolling position which needs to be set back to where it was before the rows were loaded (through <code>setScroll()</code>.</p>
 <pre><code>DataTableView.prototype._adjustNextSetClassesSpeed = function(modifiedScrollPosition) {
   var heightToAddTop = modifiedScrollPosition;
   var heightToAddBottom = Math.max(0, this._sizeRowsTotal - (modifiedScrollPosition + this._sizeSinglePage));
@@ -373,14 +373,14 @@
     $('tr').eq(-52).addClass('load-next-set')
   }
 };
-</code></pre><p>This function calculates the required heights to add to the top and bottom of the loaded set. In addition, we also need to delete the previous set of rows.</p>
+</code></pre><p><code>adjustNextSetClasses</code> function calculates the required heights to add to the top and bottom of the loaded set. In addition, we also need to delete the previous set of rows (for virtual scrolling).</p>
 <pre><code>var setScroll = function(scrollPosition) {
     console.log(&quot;setScroll&quot;);
     $('.data-table-container').scrollTop(scrollPosition);
 };
-</code></pre><p><code>setScroll</code> sets the scroll position back to where it was before.</p>
+</code></pre><p><code>setScroll</code> sets the scroll position back to where it was before the rows were loaded.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>Fast scrolling works for both upward and downward direction. The next step is to work on the upward direction for normal scrolling, which would also require work on virtual scroll.</p>
+<p>Fast scrolling works for both upward and downward direction. The next step is to work on the upward direction for normal scrolling, which would also require work on virtual scroll. The next post goes into detail on some of my ideas regarding this.</p>
               
             </div>
           </div>
@@ -409,7 +409,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/" data-tooltip="GSoC Week: 3 Part-II">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -509,7 +509,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/" data-tooltip="GSoC Week: 3 Part-II">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
