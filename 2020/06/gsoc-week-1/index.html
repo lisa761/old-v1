@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="The first week of coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.">
+<meta name="description" content="In the first week of the coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.">
 
 
-<meta property="og:description" content="The first week of coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.">
+<meta property="og:description" content="In the first week of the coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GSoC Week: 1">
 <meta name="twitter:title" content="GSoC Week: 1">
 <meta property="og:url" content="https://lisa761.github.io/2020/06/gsoc-week-1/">
 <meta property="twitter:url" content="https://lisa761.github.io/2020/06/gsoc-week-1/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="The first week of coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.">
-<meta name="twitter:description" content="The first week of coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.">
+<meta property="og:description" content="In the first week of the coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.">
+<meta name="twitter:description" content="In the first week of the coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.">
 <meta property="og:locale" content="en-us">
 
   
@@ -289,7 +289,7 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>The first week of coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.</p>
+              <p>In the first week of the coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.</p>
 <p>In the community bonding period, I had worked on adding some basic functions that would detect when a user reaches the bottom of the table and then add the next set of rows to the table.</p>
 <p>I initially used the jQuery <code>scrollTop</code> method to detect when the bottom of the table was reached. It looked something like this:</p>
 <pre><code>$(table.parentNode).bind('scroll', function(evt) {
@@ -331,7 +331,7 @@
       self._onBottomTable(table, this, evt);
     }
 }
-</code></pre><p><code>getBoundingClientRect()</code> is a jasvscript method that keeps track of whether an element has come into view by keeping track of the associated <code>position.top</code> and <code>position.bottom</code> values. It made sense to load up the next set of rows a little before the bottom of the table, and hence the row with <code>load-next-set</code> class that it keeps track of, is the 50th row from the end.</p>
+</code></pre><p><code>getBoundingClientRect()</code> is a javascript method that keeps track of whether an element has come into view by keeping track of the associated <code>position.top</code> and <code>position.bottom</code> values. It made sense to load up the next set of rows a little before the bottom of the table, and hence the row with <code>load-next-set</code> class that it keeps track of is the 50th row from the end.</p>
 <p>The next thing to change was the <code>showRowsBottom()</code> function which was re-rendering the entire data table instead of just loading up the next set of rows. To do that, I changed the loop that called <code>renderRow</code> for each row into a function and then called it inside <code>showRowsBottom()</code>. So it changed into this:</p>
 <pre><code>DataTableView.prototype._showRowsBottom = function(table, start, onDone) {
   this._totalSize += this._pageSize;
@@ -364,7 +364,7 @@ window.adjustNextSetClasses = function() {
   $('tr:nth-last-child(50)').addClass('load-next-set');
 }
 adjustNextSetClasses();
-</code></pre><p>What this does, is insert a row at the end of the table and apply the calculated height. The height isn&rsquo;t accurate since it&rsquo;s calculated using only the height of the first row. But with scrollbars, any change in height is automatically taken care of. So any small plus/minus change in the height would not be noticeable to the user. The <code>heightToAdd</code> is calculated by subtracting the height of the visible rows from the total expected height. This also adds the class <code>load-next-set</code> to the 50th row from end.</p>
+</code></pre><p>What this does, is insert a row at the end of the table and apply the calculated height. The height isn&rsquo;t accurate since it&rsquo;s calculated using only the height of the first row. But with scrollbars, any change in height is automatically taken care of. So any small plus/minus change in the height would not be noticeable to the user. The <code>heightToAdd</code> is calculated by subtracting the height of the visible rows from the total expected height. This also adds the class <code>load-next-set</code> to the 50th row from the end.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>So till now, scrolling in the downward direction loads up the next set of rows to add to the table. This, however, does not work for when a user scrolls too fast. And that&rsquo;s because in that case, the element that we are waiting to come into view might never come into view as scrolling is done way too fast.</p>
               

@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.">
+<meta name="description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code, and finished up the Table Refactoring.">
 
 
-<meta property="og:description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.">
+<meta property="og:description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code, and finished up the Table Refactoring.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GSoC Week: 2">
 <meta name="twitter:title" content="GSoC Week: 2">
 <meta property="og:url" content="https://lisa761.github.io/2020/06/gsoc-week-2/">
 <meta property="twitter:url" content="https://lisa761.github.io/2020/06/gsoc-week-2/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.">
-<meta name="twitter:description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.">
+<meta property="og:description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code, and finished up the Table Refactoring.">
+<meta name="twitter:description" content="This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code, and finished up the Table Refactoring.">
 <meta property="og:locale" content="en-us">
 
   
@@ -289,7 +289,7 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code and finished up the Table Refactoring.</p>
+              <p>This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code, and finished up the Table Refactoring.</p>
 <h1 id="table-of-contents">Table of Contents</h1>
 <ul>
 <li><a href="#alternative-options">Alternative Options</a></li>
@@ -297,16 +297,16 @@
 <li><a href="#table-refactor">Table Refactor</a></li>
 </ul>
 <h2 id="alternative-options">Alternative options</h2>
-<p>The first article I found about how to check when an element comes into view was the new <a href="https://usefulangle.com/post/113/javascript-detecting-element-visible-during-scroll#:~:text=If%20we%20want%20to%20know,1%5D%20%7D">Intersection Obserever API</a>. This is a fairly new way, and has better performance than the <code>scroll</code> event functions. Another <a href="https://stackoverflow.com/questions/487073/how-to-check-if-element-is-visible-after-scrolling">Stack Overflow</a> post had the same question where Intersection API was the third most upvoted answer (Second most upvoted being the <code>getBoundingClientRect()</code>). Here&rsquo;s another <a href="https://www.smashingmagazine.com/2018/01/deferring-lazy-loading-intersection-observer-api/">article</a> that explains why Intersection API has better performance.</p>
-<p>I did end up adding it and testing how it works. But a major fallback was the fact that it cannot change selected elements. Which means, that once it&rsquo;s selected the <code>load-next-set</code> row, it wouldn&rsquo;t change to observing another element. 
+<p>The first article I found about how to check when an element comes into view was the new <a href="https://usefulangle.com/post/113/javascript-detecting-element-visible-during-scroll#:~:text=If%20we%20want%20to%20know,1%5D%20%7D">Intersection Observer API</a>. This is a fairly new way and has better performance than the <code>scroll</code> event functions. Another <a href="https://stackoverflow.com/questions/487073/how-to-check-if-element-is-visible-after-scrolling">Stack Overflow</a> post had the same question where Intersection API was the third most upvoted answer (Second most upvoted being the <code>getBoundingClientRect()</code>). Here&rsquo;s another <a href="https://www.smashingmagazine.com/2018/01/deferring-lazy-loading-intersection-observer-api/">article</a> that explains why Intersection API has better performance.</p>
+<p>I did end up adding it and testing how it works. But a major fallback was the fact that it cannot change selected elements. This means, that once it&rsquo;s selected the <code>load-next-set</code> row, it wouldn&rsquo;t change to observing another element. 
 To explain it better, once the row has been selected, even removing the selection criteria, which is the <code>load-next-set</code> class and adding it to some other row wouldn&rsquo;t force the API to observe the new row instead. It would still be observing the first row to ever have the <code>load-next-set</code> class irrespective of whether it still has that class. This would not work when we add the class to a new row every time the next set of rows are loaded. Therefore, right now, in order to keep the project moving, this has been kept on hold until we finish the prototype and find a way to fix this problem.</p>
 <h2 id="bugs">Bugs</h2>
 <ul>
 <li>
-<p>The first problem was that the scrollbar height did not work for records mode. The <code>sizeTotal</code> variable only kept in check the total number of rows in row mode. And hence when the mode was changed to record, the height reflected the huge reduction in number of records (from total rows). This was easy to fix by changing the <code>this._sizeRowsTotal = this._sizeRowFirst * theProject.rowModel.total;</code> to <code>this._sizeRowsTotal = this._sizeRowFirst * theProject.metadata.rowCount;</code>. This ensured that the toal height only depends on the total number of rows and not the mode.</p>
+<p>The first problem was that the scrollbar height did not work for records mode. The <code>sizeTotal</code> variable only kept in check the total number of rows in row mode. And hence when the mode was changed to record, the height reflected the huge reduction in the number of records (from total rows). This was easy to fix by changing the <code>this._sizeRowsTotal = this._sizeRowFirst * theProject.rowModel.total;</code> to <code>this._sizeRowsTotal = this._sizeRowFirst * theProject.metadata.rowCount;</code>. This ensured that the total height only depends on the total number of rows and not the mode.</p>
 </li>
 <li>
-<p>The second problem was the adding of last row. The last row was added to the table even if all the rows were already loaded and there was no requirement for a row to provide additional height. This was solved by adding an <code>if</code> condition to check if the total number of rows are already present before inserting a new last row.</p>
+<p>The second problem was the adding of the last row. The last row was added to the table even if all the rows were already loaded and there was no requirement for a row to provide additional height. This was solved by adding an <code>if</code> condition to check if the total number of rows is already present before inserting a new last row.</p>
 </li>
 </ul>
 <pre><code>if(self._totalSize &lt; theProject.rowModel.total) {
@@ -323,8 +323,8 @@ To explain it better, once the row has been selected, even removing the selectio
   }
 };
 </code></pre><h2 id="table-refactor">Table Refactor</h2>
-<p>The <a href="https://github.com/OpenRefine/OpenRefine/pull/2422">first PR</a> for Table Refactoring had dealt with most of the work that was required. Which was to move the header container and the table body into the same table using <code>&lt;thead&gt;</code>. This refacoring solves issues around some reflow events caused by resizing the columns and rows. It also keeps these columns in sync with the data table. This also ensures that any changes applied to the table body is automatically reflected in header.</p>
-<p>I finished off this PR <a href="https://github.com/OpenRefine/OpenRefine/pull/2719">here</a>. There were some styling issues, most pertaining to Firefox bugs that needed to be fixed in addition to including a fixed header. Right now only the column with <code>column-header</code> class, or the one with the column names are fixed. The entire group of columns which are rendered in XML/JSON file types (for the node structure) are not fixed. This is something that I am thinking of adding in a separate PR, so as to move ahead with the changes that the project code requires once the table moves into a single conntainer.</p>
+<p>The <a href="https://github.com/OpenRefine/OpenRefine/pull/2422">first PR</a> for Table Refactoring had dealt with most of the work that was required. Which was to move the header container and the table body into the same table using <code>&lt;thead&gt;</code>. This refactoring solves issues around some reflow events caused by resizing the columns and rows. It also keeps these columns in sync with the data table. This also ensures that any changes applied to the table body are automatically reflected in the header.</p>
+<p>I finished off this PR <a href="https://github.com/OpenRefine/OpenRefine/pull/2719">here</a>. There were some styling issues, most pertaining to Firefox bugs that needed to be fixed in addition to including a fixed header. Right now only the columns with the <code>column-header</code> class or the one with the column names are fixed. The entire group of columns that are rendered in XML/JSON file types (for the node structure) is not fixed. This is something that I am thinking of adding in a separate PR, so as to move ahead with the changes that the project code requires once the table moves into a single container.</p>
               
             </div>
           </div>

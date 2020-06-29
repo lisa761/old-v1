@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="The normal upwards scrolling and the virtual scroll, both are something that go hand in hand.">
+<meta name="description" content="The normal upwards scrolling and the virtual scroll, both go hand in hand.">
 
 
-<meta property="og:description" content="The normal upwards scrolling and the virtual scroll, both are something that go hand in hand.">
+<meta property="og:description" content="The normal upwards scrolling and the virtual scroll, both go hand in hand.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GSoC Week: 3 Part-II">
 <meta name="twitter:title" content="GSoC Week: 3 Part-II">
 <meta property="og:url" content="https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
 <meta property="twitter:url" content="https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="The normal upwards scrolling and the virtual scroll, both are something that go hand in hand.">
-<meta name="twitter:description" content="The normal upwards scrolling and the virtual scroll, both are something that go hand in hand.">
+<meta property="og:description" content="The normal upwards scrolling and the virtual scroll, both go hand in hand.">
+<meta name="twitter:description" content="The normal upwards scrolling and the virtual scroll, both go hand in hand.">
 <meta property="og:locale" content="en-us">
 
   
@@ -289,10 +289,10 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>The normal upwards scrolling and the virtual scroll, both are something that go hand in hand.</p>
+              <p>The normal upwards scrolling and the virtual scroll, both go hand in hand.</p>
 <p>Using the rows with the class <code>load-next-set</code> and checking the direction in which the user is scrolling before it comes into view, gives a good idea of which set of rows need to be loaded, i.e. the ones above or the ones below. This could be done by adding the class to the 50th row from the top as well as the end.</p>
 <p>To explain this better, for example, a user is scrolling down from the 101st row (Remember, the number of rows loaded at a given time is 100). Once the 150th row comes into view, the next set of rows i.e. 201st to 300th are appended into the table. So now you have rows from 100 to 300 present, with 150th and 250th rows with class <code>load-next-set</code>. If the user keeps going down, and the 250th row comes into view, we can safely remove the 101st to 200th row (and add 301st to 400th). Now if the user starts going upwards, and the 250th row is still in view or comes into view, we load the set above the present one, i.e. rows 101st to 200th are added to the top of the table again (and the 301st to 400th destroyed). So at any given time, there cannot be more than 200 rows present in the DOM.</p>
-<p>For cases where a user might be going upwards and the 50th row from top doesn&rsquo;t come into view (for example, at the end of a particularly fast scroll, the 20th row from top is visible and the user decides to go upwards), we look for whether the first row (the empty one added to push down the position of rows) has come into view (even partially) and load up the corresponding rows. Same for when we are going downwards.</p>
+<p>For cases where a user might be going upwards and the 50th row from the top doesn&rsquo;t come into view (for example, at the end of a particularly fast scroll, the 20th row from the top is visible and the user decides to go upwards), we look for whether the first row (the empty one added to push down the position of rows) has come into view (even partially) and load up the corresponding rows. Same for when we are going downwards.</p>
 <p>So now, we will be keeping track of 4 element: the first and last <code>load-next-set</code>, the first-row and the last-row. The scroll event function with the changes looks like this:</p>
 <pre><code>var flag = 0;
 $(table.parentNode.parentNode).bind('scroll', function(evt) {
@@ -345,8 +345,8 @@ $(table.parentNode.parentNode).bind('scroll', function(evt) {
   }, 250));
   self._scrollTop = $(this).scrollTop();
 });
-</code></pre><p>So if the first <code>load-next-set</code> comes into view, and the user is scrolling upwards, we load the above set. Similarly, when the last <code>load-next-set</code> comes into view and the user is scrolling downwards, we load the below set. The flag is used to ensure that no loading of upper set and next set occur concurrently (in cases where the first 50th row is also the last 50th row).</p>
-<p>The <code>onTopTable</code> is similar to the <code>onBottomtable</code> with start value set accordingly. In this step, we are keeping track of the first and last loaded row (present in the DOM at a time). <code>pageStart</code> refers to the first loaded row, and the <code>totalSize</code> refers to the last loaded row.</p>
+</code></pre><p>So if the first <code>load-next-set</code> comes into view, and the user is scrolling upwards, we load the above set. Similarly, when the last <code>load-next-set</code> comes into view and the user is scrolling downwards, we load the below set. The flag is used to ensure that no loading of the upper set and next set occur concurrently (in cases where the first 50th row is also the last 50th row).</p>
+<p>The <code>onTopTable</code> is similar to the <code>onBottomtable</code> with the start value set accordingly. In this step, we are keeping track of the first and last loaded row (present in the DOM at a time). <code>pageStart</code> refers to the first loaded row, and the <code>totalSize</code> refers to the last loaded row.</p>
 <pre><code>DataTableView.prototype._onTopTable = function(scrollPosition, table, elmt, evt) {
   if(this._pageStart - this._pageSize &gt;= 0) {
     this._showRowsTop(scrollPosition, table, this._pageStart - this._pageSize);
@@ -373,8 +373,8 @@ $(table.parentNode.parentNode).bind('scroll', function(evt) {
     }
   }, this._sorting);
 };
-</code></pre><p>The <code>loadRows</code> function recieves an argument <code>start</code> to maintain the indices where each row is to be inserted (Note that <code>showRowsBottom</code> doesn&rsquo;t pass this argument because we always insert rows to the bottom of the table).</p>
-<p>The <code>showRowsTop </code> funtion, sets the totalSize and calls the <code>_adjustNextSetClasses</code> with an additional argument <code>true</code> which indicates that the classes need to be adjusted according to the top set.</p>
+</code></pre><p>The <code>loadRows</code> function receives an argument <code>start</code> to maintain the indices where each row is to be inserted (Note that <code>showRowsBottom</code> doesn&rsquo;t pass this argument because we always insert rows to the bottom of the table).</p>
+<p>The <code>showRowsTop </code> function sets the totalSize and calls the <code>_adjustNextSetClasses</code> with an additional argument <code>true</code> which indicates that the classes need to be adjusted according to the top set.</p>
 <pre><code>DataTableView.prototype._adjustNextSetClasses = function(start, top) {
   var heightToAddBottom = Math.max(0, this._sizeRowsTotal - (this._totalSize) * this._sizeRowFirst);
 
@@ -408,10 +408,10 @@ $(table.parentNode.parentNode).bind('scroll', function(evt) {
     $('tr').eq(51).addClass('load-next-set');
   }
 }
-</code></pre><p><code>adjustNextSetClasses</code> is where most of the work takes place: adding appropriate height to the first and last row in order to reflect the correct position, and the deletion of rows that are not visible or requried anymore.</p>
-<p>Some of the calculations in the above code are a bit repititive and will be updated in a cleaner manner in the PR.</p>
+</code></pre><p><code>adjustNextSetClasses</code> is where most of the work takes place: adding appropriate height to the first and last row in order to reflect the correct position and the deletion of rows that are not visible or required anymore.</p>
+<p>Some of the calculations in the above code are a bit repetitive and will be updated in a cleaner manner in the PR.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>The basic work for the virtual scrolling system is done. Now the main factor to focus on is performance and optimization of these functions (and bugs and user feedback).</p>
+<p>The basic work for the virtual scrolling system is done. Now the main factor to focus on is the performance and optimization of these functions (and bugs and user feedback).</p>
               
             </div>
           </div>
