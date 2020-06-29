@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="The normal upwards scrolling and the virtual scroll, both are something that go hand in hand.">
+<meta name="description" content="The focus for the end of this week was to get ready with a basic prototype that can be released to the users. Therefore, most of the work was testing and finding bugs in the current working code.">
 
 
-<meta property="og:description" content="The normal upwards scrolling and the virtual scroll, both are something that go hand in hand.">
+<meta property="og:description" content="The focus for the end of this week was to get ready with a basic prototype that can be released to the users. Therefore, most of the work was testing and finding bugs in the current working code.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GSoC Week: 3 Part-II">
-<meta name="twitter:title" content="GSoC Week: 3 Part-II">
-<meta property="og:url" content="https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
-<meta property="twitter:url" content="https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
+<meta property="og:title" content="GSoC Week: 4">
+<meta name="twitter:title" content="GSoC Week: 4">
+<meta property="og:url" content="https://lisa761.github.io/2020/06/gsoc-week-4/">
+<meta property="twitter:url" content="https://lisa761.github.io/2020/06/gsoc-week-4/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="The normal upwards scrolling and the virtual scroll, both are something that go hand in hand.">
-<meta name="twitter:description" content="The normal upwards scrolling and the virtual scroll, both are something that go hand in hand.">
+<meta property="og:description" content="The focus for the end of this week was to get ready with a basic prototype that can be released to the users. Therefore, most of the work was testing and finding bugs in the current working code.">
+<meta name="twitter:description" content="The focus for the end of this week was to get ready with a basic prototype that can be released to the users. Therefore, most of the work was testing and finding bugs in the current working code.">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-06-22T00:00:00">
+    <meta property="article:published_time" content="2020-06-28T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-06-22T00:00:00">
+    <meta property="article:modified_time" content="2020-06-28T00:00:00">
   
   
   
@@ -53,8 +53,8 @@
 
 
 
-  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1592658972/Personal%20Blog/GSoC/vector-illustration-calendar-day-calendar-icon-vector-calendar-day-120346059_pslhot.jpg">
-  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1592658972/Personal%20Blog/GSoC/vector-illustration-calendar-day-calendar-icon-vector-calendar-day-120346059_pslhot.jpg">
+  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1593369365/Personal%20Blog/GSoC/vector-illustration-calendar-day-calendar-icon-vector-calendar-day-120345978_ae0gvc.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1593369365/Personal%20Blog/GSoC/vector-illustration-calendar-day-calendar-icon-vector-calendar-day-120345978_ae0gvc.jpg">
 
 
 
@@ -64,14 +64,14 @@
   <meta property="twitter:image" content="https://avatars0.githubusercontent.com/u/52909743?s=460&u=bdc3b24f17399aa050098c31c1fe19ec4b55bb2a&v=4">
 
 
-    <title>GSoC Week: 3 Part-II</title>
+    <title>GSoC Week: 4</title>
 
     <link rel="icon" href="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1589453265/Personal%20Blog/2020-05-14_2_pfaw0c.png">
     
 
     
 
-    <link rel="canonical" href="https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
+    <link rel="canonical" href="https://lisa761.github.io/2020/06/gsoc-week-4/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -262,15 +262,15 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      GSoC Week: 3 Part-II
+      GSoC Week: 4
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-06-22T00:00:00Z">
+      <time itemprop="datePublished" datetime="2020-06-28T00:00:00Z">
         
-  June 22, 2020
+  June 28, 2020
 
       </time>
     
@@ -289,129 +289,62 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>The normal upwards scrolling and the virtual scroll, both are something that go hand in hand.</p>
-<p>Using the rows with the class <code>load-next-set</code> and checking the direction in which the user is scrolling before it comes into view, gives a good idea of which set of rows need to be loaded, i.e. the ones above or the ones below. This could be done by adding the class to the 50th row from the top as well as the end.</p>
-<p>To explain this better, for example, a user is scrolling down from the 101st row (Remember, the number of rows loaded at a given time is 100). Once the 150th row comes into view, the next set of rows i.e. 201st to 300th are appended into the table. So now you have rows from 100 to 300 present, with 150th and 250th rows with class <code>load-next-set</code>. If the user keeps going down, and the 250th row comes into view, we can safely remove the 101st to 200th row (and add 301st to 400th). Now if the user starts going upwards, and the 250th row is still in view or comes into view, we load the set above the present one, i.e. rows 101st to 200th are added to the top of the table again (and the 301st to 400th destroyed). So at any given time, there cannot be more than 200 rows present in the DOM.</p>
-<p>For cases where a user might be going upwards and the 50th row from top doesn&rsquo;t come into view (for example, at the end of a particularly fast scroll, the 20th row from top is visible and the user decides to go upwards), we look for whether the first row (the empty one added to push down the position of rows) has come into view (even partially) and load up the corresponding rows. Same for when we are going downwards.</p>
-<p>So now, we will be keeping track of 4 element: the first and last <code>load-next-set</code>, the first-row and the last-row. The scroll event function with the changes looks like this:</p>
+              <p>The focus for the end of this week was to get ready with a basic prototype that can be released to the users. Therefore, most of the work was testing and finding bugs in the current working code.</p>
+<h2 id="bugs">Bugs</h2>
+<ul>
+<li>A major bug was maintaining the scroll direction. Although it worked well for normal scrolling, every time a row with <code>load-next-set</code> came into view and the corresponding load and delete operations took place, the adjustment of the scroll heights always led to change in the value of the variable storing the direction (even though the user didn&rsquo;t technically scroll).</li>
+</ul>
+<p>A workaround for it is to maintain what function was executed previously. For eg, if the last thing to be executed had been the loading of next set, then we wouldn&rsquo;t perform the loading of upper set within 250ms of it. This allows for the function to ignore the change in values caused due to scrollbar adjustments.</p>
+<p>Here is how the variable <code>flag</code> is maintained to do the above task:</p>
 <pre><code>var flag = 0;
 $(table.parentNode.parentNode).bind('scroll', function(evt) {
-  self._downwardDirection = self._scrollTop &lt; $(this).scrollTop();
 
-  var element = document.querySelectorAll('.load-next-set');
-  element = element[element.length - 1];
-  var position = element.getBoundingClientRect();
-  var element2 = document.querySelector('.load-next-set');
-  var position2 = element2.getBoundingClientRect();
-  var lastElement = document.querySelector('.last-row');
-  var positionLastElement = lastElement.getBoundingClientRect();
-  var firstElement = document.querySelector('.first-row');
-  var positionFirstElement = firstElement.getBoundingClientRect();
+  // initialization of variables
 
-  if(self._downwardDirection &amp;&amp; !flag) {
-    if((position.top &gt;= 0 &amp;&amp; position.bottom &lt;= window.innerHeight) || 
-      (positionLastElement.top &lt; window.innerHeight &amp;&amp; positionLastElement.top &gt; 0)) {
-      console.log('Loading next set');
-      flag = true;
-      self._onBottomTable(self._scrollTop, table, this, evt);
-    }
-  }
+  // Condition to load next set &amp;&amp; !flag {
+      flag = true; // set to true
+  // }
 
-  if(!self._downwardDirection &amp;&amp; !flag) {
-    if(position2.top &gt;= 0 &amp;&amp; position2.bottom &lt;= window.innerHeight || 
-      (positionFirstElement.bottom &gt; 0 &amp;&amp; positionFirstElement.bottom &lt; window.innerHeight)) {
-      console.log('Loading upper set');
-      flag = true;
-      self._onTopTable(self._scrollTop, table, this, evt);
-    }
-  }
+  // Condition to load upper set &amp;&amp; !flag {
+      flag = true; // set to true
+  // }
 
   clearTimeout($.data(this, 'scrollTimer'));
   $.data(this, 'scrollTimer', setTimeout(function() {
-    if(positionLastElement.top &lt;= 0 &amp;&amp; positionLastElement.bottom &gt;= 0) {
-      console.log('Last row is partially visible in screen');
-      var goto = self.getPageNumberSrcolling(self._scrollTop);
-      console.log(goto + ' ' + self._scrollTop);
-      self._onChangeGotoScrolling(self._scrollTop, goto, table);
-    }
-      
-    if(positionFirstElement.top &lt; 0 &amp;&amp; positionFirstElement.bottom &gt;= window.innerHeight) {
-      console.log('First row is partially visible in screen');
-      var goto = self.getPageNumberSrcolling(self._scrollTop);
-      console.log(goto + ' ' + self._scrollTop);
-      self._onChangeGotoScrolling(self._scrollTop, goto, table);
-    }
-    flag = 0;
+    // other functions related to loading sets
+    flag = 0; // set to false
   }, 250));
   self._scrollTop = $(this).scrollTop();
 });
-</code></pre><p>So if the first <code>load-next-set</code> comes into view, and the user is scrolling upwards, we load the above set. Similarly, when the last <code>load-next-set</code> comes into view and the user is scrolling downwards, we load the below set. The flag is used to ensure that no loading of upper set and next set occur concurrently (in cases where the first 50th row is also the last 50th row).</p>
-<p>The <code>onTopTable</code> is similar to the <code>onBottomtable</code> with start value set accordingly. In this step, we are keeping track of the first and last loaded row (present in the DOM at a time). <code>pageStart</code> refers to the first loaded row, and the <code>totalSize</code> refers to the last loaded row.</p>
-<pre><code>DataTableView.prototype._onTopTable = function(scrollPosition, table, elmt, evt) {
-  if(this._pageStart - this._pageSize &gt;= 0) {
-    this._showRowsTop(scrollPosition, table, this._pageStart - this._pageSize);
-  }
-};
-</code></pre><p>The <code>if</code> condition ensures that we don&rsquo;t get into negative values while loading the upper set.</p>
-<pre><code>DataTableView.prototype._showRowsTop = function(scrollPosition, table, start, onDone) {
-  console.log('_showRowsTop');
-  var self = this;
-
-  this._totalSize = start + 2 * this._pageSize;
-  console.log(start);
-
-  $('tr.load-next-set').removeClass('load-next-set');
-
-  Refine.fetchRows(start, this._pageSize, function() {
-    $('.last-row').remove();
-
-    loadRows(start);
-    self._adjustNextSetClasses(start, true);
-    
-    if (onDone) {
-      onDone();
-    }
-  }, this._sorting);
-};
-</code></pre><p>The <code>loadRows</code> function recieves an argument <code>start</code> to maintain the indices where each row is to be inserted (Note that <code>showRowsBottom</code> doesn&rsquo;t pass this argument because we always insert rows to the bottom of the table).</p>
-<p>The <code>showRowsTop </code> funtion, sets the totalSize and calls the <code>_adjustNextSetClasses</code> with an additional argument <code>true</code> which indicates that the classes need to be adjusted according to the top set.</p>
-<pre><code>DataTableView.prototype._adjustNextSetClasses = function(start, top) {
-  var heightToAddBottom = Math.max(0, this._sizeRowsTotal - (this._totalSize) * this._sizeRowFirst);
-
-  if(top) {
-    this._pageStart = start;
-    heightToAddBottom = Math.max(0, this._sizeRowsTotal - (this._pageStart + 2 * this._pageSize) * this._sizeRowFirst);
-  }
-
-  if($('tbody tr').length &gt; 102 &amp;&amp; start &gt; 100 &amp;&amp; top == null) { // for going downwards
-    console.log('Deleting above rows');
-    $('tbody tr').slice(1, $('tbody tr').length - 2 * this._pageSize).remove();
-    this._pageStart = start - this._pageSize;
-  }
-  if($('tbody tr').length &gt; 201 &amp;&amp; top) { // for going upwards
-    console.log('Deleting below rows');
-    $('tbody tr').slice(201, $('tbody tr').length).remove();
-  }
-
-  var heightToAddTop = (this._pageStart) * this._sizeRowFirst;
-  $('tbody tr:first').css('height', heightToAddTop);
-
-  document.querySelector('.data-table').insertRow();
-  $('tr:last').css('height', heightToAddBottom);
-  $('tr:last').addClass('last-row');
-
-  if (theProject.rowModel.mode == &quot;record-based&quot;) {
-    $('tr.record').eq(-51).addClass('load-next-set');
-    $('tr.record').eq(51).addClass('load-next-set');
-  } else {
-    $('tr').eq(-52).addClass('load-next-set');
-    $('tr').eq(51).addClass('load-next-set');
-  }
+</code></pre><ul>
+<li>Since the calculations for the <code>sizeRowFirst</code> etc. were done in the <code>resize</code> function, every time the window was resized, a lot of these values changed and became inconsistent with the table (this is because the resize event doesn&rsquo;t necessarily change the table layout or row size anymore).</li>
+</ul>
+<p>This was particularly easy to fix. All that was required was to shift these calculations to the <code>renderDataTables</code> function. This ensured that the initial calculations related to size were done only once at the beginning.</p>
+<ul>
+<li>Another bug was with checking when the <code>first-row</code> comes into view. The problem was that using <code>position.top</code> of <code>getBoundingClientRect</code> gave us it&rsquo;s position from the viewport top and not the parent element. This gave wrong calculations, as even when the element wasn&rsquo;t visible (but was somewhere under the header and view-panel elements) the row would be evaluated as visible.</li>
+</ul>
+<p>One way to fix this was to change the condition value from <code>if(positionFirstElement.top &lt; 0 &amp;&amp; positionFirstElement.bottom &gt;= window.innerHeight)</code> to <code>if(positionFirstElement.top &lt; self._headerTop + 1 &amp;&amp;  positionFirstElement.bottom &gt;= window.innerHeight)</code></p>
+<p>Here <code>headerTop</code> is a variable that contains the height of the header and view-panel <code>div</code> containers.</p>
+<p><code>this._headerTop = $('thead').offset().top + $('thead').height();</code></p>
+<h2 id="improvements">Improvements</h2>
+<ul>
+<li><code>sizeRowFirst</code> stores the height of the first row in order to calculate the size of a given set of <code>n</code> number of rows. The problem with that is that it assumes that the rest of the rows would be similar to the first one, which often is not the case. A better way would be to calculate the average row size of the first set and then use that for the calculations instead. This average size can be calculated by calculating the height of the first set and dividing it by the total number of rows it contains. Here&rsquo;s the code for it:</li>
+</ul>
+<pre><code>var total = 0;
+for (var i = 1; i &lt; table.rows.length; i++) {
+    row = table.rows[i];
+    total += row.offsetHeight;
 }
-</code></pre><p><code>adjustNextSetClasses</code> is where most of the work takes place: adding appropriate height to the first and last row in order to reflect the correct position, and the deletion of rows that are not visible or requried anymore.</p>
-<p>Some of the calculations in the above code are a bit repititive and will be updated in a cleaner manner in the PR.</p>
+this._sizeRowFirst = total / 100;
+this._sizeRowsTotal = this._sizeRowFirst * theProject.metadata.rowCount;
+this._sizeSinglePage = this._sizeRowFirst * this._pageSize;
+</code></pre><ul>
+<li>The current calculations were done with fixing the size to 100 and using that everywhere. It is better to use a variable instead (in order to be able to manipulate the size based on different conditions). Perhaps, later when we start working on the performance.</li>
+</ul>
+<h2 id="alternatives">Alternatives</h2>
+<p>I have also been working on using Intersection Observer API instead of the scroll event. The performance improvement that might come with it is definitely something to try and test. The work on that is on another branch that you can see <a href="https://github.com/lisa761/OpenRefine/compare/scroll...lisa761:intersection-api-scroll">here</a>.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>The basic work for the virtual scrolling system is done. Now the main factor to focus on is performance and optimization of these functions (and bugs and user feedback).</p>
+<p>The prototype should be released to the users soon, and that would mark a significant point of the project. Improvement and performance along with the reported bugs would be the next step to the project.</p>
               
             </div>
           </div>
@@ -440,7 +373,7 @@ $(table.parentNode.parentNode).bind('scroll', function(evt) {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-4/" data-tooltip="GSoC Week: 4">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -448,7 +381,7 @@ $(table.parentNode.parentNode).bind('scroll', function(evt) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-3-part-i/" data-tooltip="GSoC Week: 3 Part-I">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/" data-tooltip="GSoC Week: 3 Part-II">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -466,19 +399,19 @@ $(table.parentNode.parentNode).bind('scroll', function(evt) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/06/gsoc-week-4/">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/06/gsoc-week-4/">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/06/gsoc-week-4/">
               <i class="fab fa-google-plus-g"></i>
             </a>
           </li>
@@ -540,7 +473,7 @@ $(table.parentNode.parentNode).bind('scroll', function(evt) {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-4/" data-tooltip="GSoC Week: 4">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -548,7 +481,7 @@ $(table.parentNode.parentNode).bind('scroll', function(evt) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-3-part-i/" data-tooltip="GSoC Week: 3 Part-I">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/" data-tooltip="GSoC Week: 3 Part-II">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -566,19 +499,19 @@ $(table.parentNode.parentNode).bind('scroll', function(evt) {
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/06/gsoc-week-4/">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/06/gsoc-week-4/">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/06/gsoc-week-4/">
               <i class="fab fa-google-plus-g"></i>
             </a>
           </li>
@@ -608,19 +541,19 @@ $(table.parentNode.parentNode).bind('scroll', function(evt) {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flisa761.github.io%2F2020%2F06%2Fgsoc-week-3-part-ii%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flisa761.github.io%2F2020%2F06%2Fgsoc-week-4%2F">
           <i class="fa fab fa-facebook"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flisa761.github.io%2F2020%2F06%2Fgsoc-week-3-part-ii%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flisa761.github.io%2F2020%2F06%2Fgsoc-week-4%2F">
           <i class="fa fab fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Flisa761.github.io%2F2020%2F06%2Fgsoc-week-3-part-ii%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Flisa761.github.io%2F2020%2F06%2Fgsoc-week-4%2F">
           <i class="fa fab fa-google-plus-g"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -714,9 +647,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/lisa761.github.io\/2020\/06\/gsoc-week-3-part-ii\/';
+          this.page.url = 'https:\/\/lisa761.github.io\/2020\/06\/gsoc-week-4\/';
           
-            this.page.identifier = '\/2020\/06\/gsoc-week-3-part-ii\/'
+            this.page.identifier = '\/2020\/06\/gsoc-week-4\/'
           
         };
         (function() {
