@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lisa761.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GSoC Week: 6</title>
+      <link>https://lisa761.github.io/2020/07/gsoc-week-6/</link>
+      <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/2020/07/gsoc-week-6/</guid>
+      <description>&lt;p&gt;This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>GSoC Week: 5</title>

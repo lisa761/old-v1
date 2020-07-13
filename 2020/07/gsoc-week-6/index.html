@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="This week, I focused more on integrating and seeing benefits of the intersection API along with looking at rendering functions and facets.">
+<meta name="description" content="This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.">
 
 
-<meta property="og:description" content="This week, I focused more on integrating and seeing benefits of the intersection API along with looking at rendering functions and facets.">
+<meta property="og:description" content="This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GSoC Week: 5">
-<meta name="twitter:title" content="GSoC Week: 5">
-<meta property="og:url" content="https://lisa761.github.io/2020/07/gsoc-week-5/">
-<meta property="twitter:url" content="https://lisa761.github.io/2020/07/gsoc-week-5/">
+<meta property="og:title" content="GSoC Week: 6">
+<meta name="twitter:title" content="GSoC Week: 6">
+<meta property="og:url" content="https://lisa761.github.io/2020/07/gsoc-week-6/">
+<meta property="twitter:url" content="https://lisa761.github.io/2020/07/gsoc-week-6/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="This week, I focused more on integrating and seeing benefits of the intersection API along with looking at rendering functions and facets.">
-<meta name="twitter:description" content="This week, I focused more on integrating and seeing benefits of the intersection API along with looking at rendering functions and facets.">
+<meta property="og:description" content="This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.">
+<meta name="twitter:description" content="This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-07-05T00:00:00">
+    <meta property="article:published_time" content="2020-07-12T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-07-05T00:00:00">
+    <meta property="article:modified_time" content="2020-07-12T00:00:00">
   
   
   
@@ -53,8 +53,8 @@
 
 
 
-  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1594020257/Personal%20Blog/GSoC/115071446-vector-illustration-calendar-day-5-calendar-icon-_cyn70h.jpg">
-  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1594020257/Personal%20Blog/GSoC/115071446-vector-illustration-calendar-day-5-calendar-icon-_cyn70h.jpg">
+  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1594621537/Personal%20Blog/GSoC/115071454-vector-illustration-calendar-day-6-calendar-icon-_o9c2gd.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1594621537/Personal%20Blog/GSoC/115071454-vector-illustration-calendar-day-6-calendar-icon-_o9c2gd.jpg">
 
 
 
@@ -64,14 +64,14 @@
   <meta property="twitter:image" content="https://avatars0.githubusercontent.com/u/52909743?s=460&u=bdc3b24f17399aa050098c31c1fe19ec4b55bb2a&v=4">
 
 
-    <title>GSoC Week: 5</title>
+    <title>GSoC Week: 6</title>
 
     <link rel="icon" href="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1589453265/Personal%20Blog/2020-05-14_2_pfaw0c.png">
     
 
     
 
-    <link rel="canonical" href="https://lisa761.github.io/2020/07/gsoc-week-5/">
+    <link rel="canonical" href="https://lisa761.github.io/2020/07/gsoc-week-6/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -262,15 +262,15 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      GSoC Week: 5
+      GSoC Week: 6
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-07-05T00:00:00Z">
+      <time itemprop="datePublished" datetime="2020-07-12T00:00:00Z">
         
-  July 5, 2020
+  July 12, 2020
 
       </time>
     
@@ -289,13 +289,15 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>This week, I focused more on integrating and seeing benefits of the intersection API along with looking at rendering functions and facets.</p>
-<p>Using scroll events to check when the element comes into view often skips firing off the corresponding functions if you scroll fast enough. While it&rsquo;s not so noticeable, it&rsquo;s still better to find a way to overcome that problem. I have looked at the intersection API in terms of that. While it&rsquo;s still not the best, it&rsquo;s a bit better than what scroll event provides us (so it appears in example sites).</p>
-<p>This drawback of checking for elements to come into view to execute functions gives reasoning to why some libraries prefer using the <code>scrollTop</code> value instead. Although <code>scrollTop</code> is also known for performance issues, this decision should be based on what matters more.</p>
-<p>I have finished most of the work by replacing the scroll events with intersection API. One of the disadvantages to it is that it would consider an element visible even when the height is zero. While this is easy to fix by adding another condition for checking the height of the element we are observing, this brings up the point that overall it does not allow much freedom with what parts of the element we wish to be working with. For instance, the <code>threshold</code> value is something close to unpredictable as it changes with datasets and different scroll positions. We can try to give it some minimum number, but there still might be situations where the <code>threshold</code> value is less than that.</p>
-<p>To explain this better, the <code>threshold</code> denotes what percentage of the element we are observing is visible on the screen. This value also takes the width into account. So for instance, if you have a row with a height of <code>20px</code> and a width of <code>3000px</code> and a screen size of <code>1200px</code>, the <code>threshold</code> value will be calculated based on <code>20 x 1200</code> that&rsquo;s visible out of <code>20 x 3000</code>. This brings in the need to have a calculated minimum value of <code>threshold</code> which will depend on the datasets.</p>
-<p>Another problem with it is that it does not seem to adapt to changes in heights of the <code>first-row</code> and <code>last-row</code> as fast. It continues to call functions repeatedly even when the <code>observer</code> is set to stop observing. <a href="https://github.com/lisa761/OpenRefine/tree/intersection-api-scroll">Here</a> is the link for the branch which contains intersection API. Overall Intersection does not seem to be working the way we expect it to.</p>
-<p>The rendering functions (for adding rows and cells to the DOM) take the most time when adding rows into the table. I have been reading about the best practices to follow while using javascript and jQuery. It&rsquo;s advised to use javascript whenever we can and I have been trying to replace some of the jQuery code to javascript. I have been currently looking at the <code>renderRow</code> which renders the row, but I haven&rsquo;t been able to improvise it a lot. This highly depends on the cell rendering as well, I will be working on that in the coming week.</p>
+              <p>This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.</p>
+<p>The facets right now call <code>Refine.update</code> in order to update the entire data table every time a facet is applied. The code for this is written in <code>browsing-engine.js</code>. An easier way to solve this was to pass an argument in the said function to keep track of where the function is being called from.</p>
+<p>Currently, all the predefined facets like Range Facet, Time Range Facet, Scatterplot Facet, Text Search Facet, and List Facet do not re-render the data table. Working on this also required fixing heights and modifying the functions being called in the process of update.</p>
+<p>This feature would require a thorough amount of testing with different operations and combinations of facets to ensure that it&rsquo;s working well. I have tested facets with Text Filter which seems to be working.</p>
+<p>As for Intersection API, there are two reasons it&rsquo;s not suitable for what we are trying to do:</p>
+<ul>
+<li>We cannot limit the number of callbacks for intersection</li>
+<li>We cannot check partial visibility because with <code>threshold: 0</code> functions are going to be executed immediately when the element comes into view.</li>
+</ul>
               
             </div>
           </div>
@@ -324,7 +326,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-6/" data-tooltip="GSoC Week: 6">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -332,7 +334,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-4/" data-tooltip="GSoC Week: 4">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-5/" data-tooltip="GSoC Week: 5">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -350,19 +352,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/07/gsoc-week-5/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/07/gsoc-week-6/">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/07/gsoc-week-5/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/07/gsoc-week-6/">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/07/gsoc-week-5/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/07/gsoc-week-6/">
               <i class="fab fa-google-plus-g"></i>
             </a>
           </li>
@@ -424,7 +426,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-6/" data-tooltip="GSoC Week: 6">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -432,7 +434,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/06/gsoc-week-4/" data-tooltip="GSoC Week: 4">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-5/" data-tooltip="GSoC Week: 5">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -450,19 +452,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/07/gsoc-week-5/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/07/gsoc-week-6/">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/07/gsoc-week-5/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/07/gsoc-week-6/">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/07/gsoc-week-5/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/07/gsoc-week-6/">
               <i class="fab fa-google-plus-g"></i>
             </a>
           </li>
@@ -492,19 +494,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-5%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-6%2F">
           <i class="fa fab fa-facebook"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-5%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-6%2F">
           <i class="fa fab fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-5%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-6%2F">
           <i class="fa fab fa-google-plus-g"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -598,9 +600,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/lisa761.github.io\/2020\/07\/gsoc-week-5\/';
+          this.page.url = 'https:\/\/lisa761.github.io\/2020\/07\/gsoc-week-6\/';
           
-            this.page.identifier = '\/2020\/07\/gsoc-week-5\/'
+            this.page.identifier = '\/2020\/07\/gsoc-week-6\/'
           
         };
         (function() {
