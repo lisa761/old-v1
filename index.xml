@@ -26,7 +26,7 @@
       <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://lisa761.github.io/2020/07/gsoc-week-6/</guid>
-      <description>&lt;p&gt;This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This week, I spent time working on the reset of the scroll bar position while doing facets. The intention is to avoid resetting in cases where the data set does not change.&lt;/p&gt;</description>
     </item>
     
     <item>

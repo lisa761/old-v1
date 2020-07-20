@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.">
+<meta name="description" content="This week, I spent time working on the reset of the scroll bar position while doing facets. The intention is to avoid resetting in cases where the data set does not change.">
 
 
-<meta property="og:description" content="This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.">
+<meta property="og:description" content="This week, I spent time working on the reset of the scroll bar position while doing facets. The intention is to avoid resetting in cases where the data set does not change.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GSoC Week: 6">
 <meta name="twitter:title" content="GSoC Week: 6">
 <meta property="og:url" content="https://lisa761.github.io/2020/07/gsoc-week-6/">
 <meta property="twitter:url" content="https://lisa761.github.io/2020/07/gsoc-week-6/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.">
-<meta name="twitter:description" content="This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.">
+<meta property="og:description" content="This week, I spent time working on the reset of the scroll bar position while doing facets. The intention is to avoid resetting in cases where the data set does not change.">
+<meta name="twitter:description" content="This week, I spent time working on the reset of the scroll bar position while doing facets. The intention is to avoid resetting in cases where the data set does not change.">
 <meta property="og:locale" content="en-us">
 
   
@@ -289,8 +289,9 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>This week, I focused on facets and avoiding re-rendering of the entire data-table when they are used.</p>
+              <p>This week, I spent time working on the reset of the scroll bar position while doing facets. The intention is to avoid resetting in cases where the data set does not change.</p>
 <p>The facets right now call <code>Refine.update</code> in order to update the entire data table every time a facet is applied. The code for this is written in <code>browsing-engine.js</code>. An easier way to solve this was to pass an argument in the said function to keep track of where the function is being called from.</p>
+<p>In short, this will keep track of the function call and each time <code>Refine.update</code> is called, it will contain a variable <code>fromFacets</code>. When <code>fromFacets</code> is true, the update function in <code>data-table-view.js</code> will update the table and reset it&rsquo;s position to where it was before. This doesn&rsquo;t directly keep track of whether the data-table has actually <em>changed</em> or not but instead keeps track of whether we should go back to the previous position or not. It&rsquo;s the same thing in essence but there would be a significant difference in execution. Doing this does not affect the table for cases where re-rendering is absolutely required, for example, in Text Filter, choosing different options in Facets. This is beacuse in those cases the <code>fromFacet</code> variable is not true, hence no resetting of postions. So every time the data set changes, position is reset to start otherwise the scrollbar remains where it was before.s</p>
 <p>Currently, all the predefined facets like Range Facet, Time Range Facet, Scatterplot Facet, Text Search Facet, and List Facet do not re-render the data table. Working on this also required fixing heights and modifying the functions being called in the process of update.</p>
 <p>This feature would require a thorough amount of testing with different operations and combinations of facets to ensure that it&rsquo;s working well. I have tested facets with Text Filter which seems to be working.</p>
 <p>As for Intersection API, there are two reasons it&rsquo;s not suitable for what we are trying to do:</p>
