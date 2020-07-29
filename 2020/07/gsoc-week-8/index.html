@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="I spent this week working on the rendering functions. Since these functions take up the most time during the loading of rows, it was important to make them as efficient as is possible.">
+<meta name="description" content="This week I worked on fixing the code for records mode.">
 
 
-<meta property="og:description" content="I spent this week working on the rendering functions. Since these functions take up the most time during the loading of rows, it was important to make them as efficient as is possible.">
+<meta property="og:description" content="This week I worked on fixing the code for records mode.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GSoC Week: 7">
-<meta name="twitter:title" content="GSoC Week: 7">
-<meta property="og:url" content="https://lisa761.github.io/2020/07/gsoc-week-7/">
-<meta property="twitter:url" content="https://lisa761.github.io/2020/07/gsoc-week-7/">
+<meta property="og:title" content="GSoC Week: 8">
+<meta name="twitter:title" content="GSoC Week: 8">
+<meta property="og:url" content="https://lisa761.github.io/2020/07/gsoc-week-8/">
+<meta property="twitter:url" content="https://lisa761.github.io/2020/07/gsoc-week-8/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="I spent this week working on the rendering functions. Since these functions take up the most time during the loading of rows, it was important to make them as efficient as is possible.">
-<meta name="twitter:description" content="I spent this week working on the rendering functions. Since these functions take up the most time during the loading of rows, it was important to make them as efficient as is possible.">
+<meta property="og:description" content="This week I worked on fixing the code for records mode.">
+<meta name="twitter:description" content="This week I worked on fixing the code for records mode.">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-07-19T00:00:00">
+    <meta property="article:published_time" content="2020-07-26T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-07-19T00:00:00">
+    <meta property="article:modified_time" content="2020-07-26T00:00:00">
   
   
   
@@ -53,8 +53,8 @@
 
 
 
-  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1595228653/Personal%20Blog/GSoC/115071451-vector-illustration-calendar-day-7-calendar-icon-_pnhttc.jpg">
-  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1595228653/Personal%20Blog/GSoC/115071451-vector-illustration-calendar-day-7-calendar-icon-_pnhttc.jpg">
+  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1596031724/Personal%20Blog/GSoC/undefined_kbdl9i.png">
+  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1596031724/Personal%20Blog/GSoC/undefined_kbdl9i.png">
 
 
 
@@ -64,14 +64,14 @@
   <meta property="twitter:image" content="https://avatars0.githubusercontent.com/u/52909743?s=460&u=bdc3b24f17399aa050098c31c1fe19ec4b55bb2a&v=4">
 
 
-    <title>GSoC Week: 7</title>
+    <title>GSoC Week: 8</title>
 
     <link rel="icon" href="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1589453265/Personal%20Blog/2020-05-14_2_pfaw0c.png">
     
 
     
 
-    <link rel="canonical" href="https://lisa761.github.io/2020/07/gsoc-week-7/">
+    <link rel="canonical" href="https://lisa761.github.io/2020/07/gsoc-week-8/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -262,15 +262,15 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      GSoC Week: 7
+      GSoC Week: 8
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-07-19T00:00:00Z">
+      <time itemprop="datePublished" datetime="2020-07-26T00:00:00Z">
         
-  July 19, 2020
+  July 26, 2020
 
       </time>
     
@@ -289,55 +289,10 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>I spent this week working on the rendering functions. Since these functions take up the most time during the loading of rows, it was important to make them as efficient as is possible.</p>
-<p>I read up different blogs about managing time when using jQuery to insert elements into the DOM. One of the common things in these blogs was that jQuery takes time to convert the commands into javascript before executing them, which means its best to avoid using jQuery wherever it&rsquo;s possible. Most of the code in <code>renderRow()</code> and <code>DataTableCellUI.prototype._render()</code> is written in jQuery. Since the two main browsers we support are Chrome and Firefox, most of the jQuery code included is easily replaceable.</p>
-<p>I then proceeded to remove as much of it as possible while keeping track of the step by step improvements. You can see them <a href="https://github.com/lisa761/OpenRefine/pull/11">here</a>.</p>
-<h3 id="before">Before</h3>
-<p><img src="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1595242708/Personal%20Blog/GSoC/87232027-6ea75100-c3d9-11ea-8b38-881ddccf4151_decbjx.jpg" alt="before"></p>
-<h3 id="after">After</h3>
-<p><img src="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1595242773/Personal%20Blog/GSoC/87884243-b574f680-ca2a-11ea-8043-441171357f8e_izvkbi.jpg" alt="after"></p>
-<h3 id="comparison">Comparison</h3>
-<p>The comparison has been done done using the Javascript Profiler in Chrome Developers Tools.</p>
-<ul>
-<li>
-<p>We can see the time taken for execution of <code>renderRow</code> decreases from <code>495.7ms</code> (<code>38.09%</code>) to <code>193.6</code> (<code>20.04%</code>).</p>
-</li>
-<li>
-<p>Similarly the time take for execution of <code>DataTableCellUI.prototype._render</code> decreases from <code>416.0ms</code> (<code>31.97%</code>) to <code>148.5ms</code> (<code>15.53%</code>).</p>
-</li>
-</ul>
-<p>Here is a table comparing the values before and after replacing jQuery with javascript.</p>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Before</th>
-<th>After</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>renderRow</td>
-<td>495.7ms</td>
-<td>193.6ms</td>
-</tr>
-<tr>
-<td>renderRow</td>
-<td>38.09%</td>
-<td>20.24%</td>
-</tr>
-<tr>
-<td>DataTableCellUI.prototype._render</td>
-<td>416.0ms</td>
-<td>148.5ms</td>
-</tr>
-<tr>
-<td>DataTableCellUI.prototype._render</td>
-<td>31.97%</td>
-<td>15.53%</td>
-</tr>
-</tbody>
-</table>
+              <p>This week I worked on fixing the code for records mode.</p>
+<p>The records mode was not working as well as the rows in the infinite scrolling PR. I have spent this week identifying and fixing the problems with records mode, which mostly circulated around the ways that records are rendered.</p>
+<p>One of the things that we discussed in a meeting was the performance issues in records mode. A significant problem with records is that the rendering is done <em>record wise</em>, which means that even if the cap to load a given number of rows (which is the same variable used to cap the records) is set to a particularly small number, we do not have any control over just how many rows will be loaded (since a single record can contain many rows). One of the ways this could be solved is to change the rendering method to row wise for both the modes. This means that if the page size is set to 50, only 50 rows will load (even if the first record itself might contain 100 rows). This could be done by keeping a variable in the records model which will keep track of the last loaded row.</p>
+<p>For example, say we allow 100 rows to load at a given time. The first record contains 50 rows and the second record contains 100 rows. By using the mentioned page size, we can load rows till the 100th row or till the 50th of the second record and save that position. When we go to load the next set, we can check what the value of this variable is and start loading the records from that position. This would require some discussion on the mailing list and significant changes in the backend. Since records mode in itself is not in its best format, trying to change the rendering might get redundant later on when we try to restructure the entirety of records mode.</p>
               
             </div>
           </div>
@@ -366,7 +321,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-8/" data-tooltip="GSoC Week: 8">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -374,7 +329,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-6/" data-tooltip="GSoC Week: 6">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-7/" data-tooltip="GSoC Week: 7">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -392,19 +347,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/07/gsoc-week-7/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/07/gsoc-week-8/">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/07/gsoc-week-7/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/07/gsoc-week-8/">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/07/gsoc-week-7/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/07/gsoc-week-8/">
               <i class="fab fa-google-plus-g"></i>
             </a>
           </li>
@@ -466,7 +421,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-8/" data-tooltip="GSoC Week: 8">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -474,7 +429,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-6/" data-tooltip="GSoC Week: 6">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-7/" data-tooltip="GSoC Week: 7">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -492,19 +447,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/07/gsoc-week-7/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/07/gsoc-week-8/">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/07/gsoc-week-7/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/07/gsoc-week-8/">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/07/gsoc-week-7/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/07/gsoc-week-8/">
               <i class="fab fa-google-plus-g"></i>
             </a>
           </li>
@@ -534,19 +489,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-7%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-8%2F">
           <i class="fa fab fa-facebook"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-7%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-8%2F">
           <i class="fa fab fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-7%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-8%2F">
           <i class="fa fab fa-google-plus-g"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -640,9 +595,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/lisa761.github.io\/2020\/07\/gsoc-week-7\/';
+          this.page.url = 'https:\/\/lisa761.github.io\/2020\/07\/gsoc-week-8\/';
           
-            this.page.identifier = '\/2020\/07\/gsoc-week-7\/'
+            this.page.identifier = '\/2020\/07\/gsoc-week-8\/'
           
         };
         (function() {

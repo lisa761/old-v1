@@ -6,10 +6,19 @@
     <description>Recent content in opensource on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lisa761.github.io/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GSoC Week: 8</title>
+      <link>https://lisa761.github.io/2020/07/gsoc-week-8/</link>
+      <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/2020/07/gsoc-week-8/</guid>
+      <description>&lt;p&gt;This week I worked on fixing the code for records mode.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>GSoC Week: 7</title>
