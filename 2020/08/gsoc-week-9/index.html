@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.69.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Lisa Chandra">
 <meta name="keywords" content="">
-<meta name="description" content="This week I worked on fixing the code for records mode.">
+<meta name="description" content="This week, I started working on restructuring the Facets into a class based structure with inheritance.">
 
 
-<meta property="og:description" content="This week I worked on fixing the code for records mode.">
+<meta property="og:description" content="This week, I started working on restructuring the Facets into a class based structure with inheritance.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GSoC Week: 8">
-<meta name="twitter:title" content="GSoC Week: 8">
-<meta property="og:url" content="https://lisa761.github.io/2020/07/gsoc-week-8/">
-<meta property="twitter:url" content="https://lisa761.github.io/2020/07/gsoc-week-8/">
+<meta property="og:title" content="GSoC Week: 9">
+<meta name="twitter:title" content="GSoC Week: 9">
+<meta property="og:url" content="https://lisa761.github.io/2020/08/gsoc-week-9/">
+<meta property="twitter:url" content="https://lisa761.github.io/2020/08/gsoc-week-9/">
 <meta property="og:site_name" content="Lisa Chandra">
-<meta property="og:description" content="This week I worked on fixing the code for records mode.">
-<meta name="twitter:description" content="This week I worked on fixing the code for records mode.">
+<meta property="og:description" content="This week, I started working on restructuring the Facets into a class based structure with inheritance.">
+<meta name="twitter:description" content="This week, I started working on restructuring the Facets into a class based structure with inheritance.">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-07-26T00:00:00">
+    <meta property="article:published_time" content="2020-08-02T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-07-26T00:00:00">
+    <meta property="article:modified_time" content="2020-08-02T00:00:00">
   
   
   
@@ -53,9 +53,6 @@
 
 
 
-  <meta property="og:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1596031724/Personal%20Blog/GSoC/undefined_kbdl9i.png">
-  <meta property="twitter:image" content="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1596031724/Personal%20Blog/GSoC/undefined_kbdl9i.png">
-
 
 
 
@@ -64,14 +61,14 @@
   <meta property="twitter:image" content="https://avatars0.githubusercontent.com/u/52909743?s=460&u=bdc3b24f17399aa050098c31c1fe19ec4b55bb2a&v=4">
 
 
-    <title>GSoC Week: 8</title>
+    <title>GSoC Week: 9</title>
 
     <link rel="icon" href="https://res.cloudinary.com/dmkc6lxx2/image/upload/v1589453265/Personal%20Blog/2020-05-14_2_pfaw0c.png">
     
 
     
 
-    <link rel="canonical" href="https://lisa761.github.io/2020/07/gsoc-week-8/">
+    <link rel="canonical" href="https://lisa761.github.io/2020/08/gsoc-week-9/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -262,15 +259,15 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      GSoC Week: 8
+      GSoC Week: 9
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-07-26T00:00:00Z">
+      <time itemprop="datePublished" datetime="2020-08-02T00:00:00Z">
         
-  July 26, 2020
+  August 2, 2020
 
       </time>
     
@@ -289,10 +286,11 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>This week I worked on fixing the code for records mode.</p>
-<p>The records mode was not working as well as the rows in the infinite scrolling PR. I have spent this week identifying and fixing the problems with records mode, which mostly circulated around the ways that records are rendered.</p>
-<p>One of the things that we discussed in a meeting was the performance issues in records mode. A significant problem with records is that the rendering is done <em>record wise</em>, which means that even if the cap to load a given number of rows (which is the same variable used to cap the records) is set to a particularly small number, we do not have any control over just how many rows will be loaded (since a single record can contain many rows). One of the ways this could be solved is to change the rendering method to row wise for both the modes. This means that if the page size is set to 50, only 50 rows will load (even if the first record itself might contain 100 rows). This could be done by keeping a variable in the records model which will keep track of the last loaded row.</p>
-<p>For example, say we allow 100 rows to load at a given time. The first record contains 50 rows and the second record contains 100 rows. By using the mentioned page size, we can load rows till the 100th row or till the 50th of the second record and save that position. When we go to load the next set, we can check what the value of this variable is and start loading the records from that position. This would require some discussion on the mailing list and significant changes in the backend. Since records mode in itself is not in its best format, trying to change the rendering might get redundant later on when we try to restructure the entirety of records mode.</p>
+              <p>This week, I started working on restructuring the Facets into a class based structure with inheritance.</p>
+<p>Facets right now are individual functions that carry out a few pre-defined set of operations (other than the Custom Facet). These functions (i.e. different types of Facets) do not have any relation to each other for the most part since their operations are pretty different (List Facet, Timrange Facet, Scatter plot Facet). However, they do share some common properties when it comes to the UI.</p>
+<p>With the addition of users wanting to go back to the previous position on the removal of Facets, maintaining a state becomes crucial to its execution. This state in addition to the common functions related to UI could be moved to a base Facet in order to remove the repetition of said functions and maintain a single state for all types instead of giving an individual state to each Facet type.</p>
+<p>As per the discussion in the mailing list, I have started working on replacing the current function prototype of each Facet into a class based structure. I will soon get to making the base class for Facets and deriving each Facet type from the said base class.</p>
+<p>I have also been finishing up the current Infinite Scroll PR to get it to merge as soon as possible. As mentioned in the reviews, there&rsquo;s a boundary condition that is required to be added as well as the Loading sign when loading a given set. I would be working on these to get it finished as soon as possible. There are some other rendering changes that are required (although the speed comparison is affected because the master branch now has improvements in rendering functions PR merged) and I will read a bit more about it. There are some ideas that I will try implementing in the coming week and expand on it if they show some improvements in rendering speed.</p>
               
             </div>
           </div>
@@ -321,7 +319,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/08/gsoc-week-9/" data-tooltip="GSoC Week: 9">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -329,7 +327,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-7/" data-tooltip="GSoC Week: 7">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-8/" data-tooltip="GSoC Week: 8">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -347,19 +345,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/07/gsoc-week-8/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/08/gsoc-week-9/">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/07/gsoc-week-8/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/08/gsoc-week-9/">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/07/gsoc-week-8/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/08/gsoc-week-9/">
               <i class="fab fa-google-plus-g"></i>
             </a>
           </li>
@@ -421,7 +419,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/08/gsoc-week-9/" data-tooltip="GSoC Week: 9">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -429,7 +427,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-7/" data-tooltip="GSoC Week: 7">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://lisa761.github.io/2020/07/gsoc-week-8/" data-tooltip="GSoC Week: 8">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -447,19 +445,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/07/gsoc-week-8/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://lisa761.github.io/2020/08/gsoc-week-9/">
               <i class="fab fa-facebook"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/07/gsoc-week-8/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://lisa761.github.io/2020/08/gsoc-week-9/">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/07/gsoc-week-8/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://lisa761.github.io/2020/08/gsoc-week-9/">
               <i class="fab fa-google-plus-g"></i>
             </a>
           </li>
@@ -489,19 +487,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-8%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flisa761.github.io%2F2020%2F08%2Fgsoc-week-9%2F">
           <i class="fa fab fa-facebook"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-8%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Flisa761.github.io%2F2020%2F08%2Fgsoc-week-9%2F">
           <i class="fa fab fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Flisa761.github.io%2F2020%2F07%2Fgsoc-week-8%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Flisa761.github.io%2F2020%2F08%2Fgsoc-week-9%2F">
           <i class="fa fab fa-google-plus-g"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -595,9 +593,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/lisa761.github.io\/2020\/07\/gsoc-week-8\/';
+          this.page.url = 'https:\/\/lisa761.github.io\/2020\/08\/gsoc-week-9\/';
           
-            this.page.identifier = '\/2020\/07\/gsoc-week-8\/'
+            this.page.identifier = '\/2020\/08\/gsoc-week-9\/'
           
         };
         (function() {
