@@ -6,10 +6,19 @@
     <description>Recent content in openrefine on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lisa761.github.io/tags/openrefine/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GSoC Week: 10</title>
+      <link>https://lisa761.github.io/2020/08/gsoc-week-10/</link>
+      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lisa761.github.io/2020/08/gsoc-week-10/</guid>
+      <description>&lt;p&gt;This week, I worked on finishing up and testing out the infinite scroll PR.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>GSoC Week: 9</title>
