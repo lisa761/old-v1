@@ -39,6 +39,7 @@ setInterval(function() {
 		$('h1').css('color', '#9098b0');
 		$('h2').css('color', '#9098b0');
 		$('h3').css('color', '#9098b0');
+		$('.pagination .btn').css('background-color', 'rgb(21, 32, 43)');
 	} else {
 		toggleLightIconSlider.classList.add("fa-toggle-off");
 		toggleLightIconSlider.classList.remove("fa-toggle-on");
@@ -56,5 +57,6 @@ setInterval(function() {
 		$('h1').css('color', '#4a4a4a');
 		$('h2').css('color', '#4a4a4a');
 		$('h3').css('color', '#4a4a4a');
+		$('.pagination .btn').css('background-color', '#fff');
 	}
 }, 100);
