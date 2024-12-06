@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>authentication on Lisa Chandra</title>
-    <link>https://lisa761.github.io/tags/authentication/</link>
+    <link>https://lisa761.github.io/old-v1/tags/authentication/</link>
     <description>Recent content in authentication on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://lisa761.github.io/tags/authentication/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lisa761.github.io/old-v1/tags/authentication/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>YelpCamp</title>
-      <link>https://lisa761.github.io/2019/11/yelpcamp/</link>
+      <link>https://lisa761.github.io/old-v1/2019/11/yelpcamp/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2019/11/yelpcamp/</guid>
+      <guid>https://lisa761.github.io/old-v1/2019/11/yelpcamp/</guid>
       <description>&lt;p&gt;A website that brings together all available campgrounds with user reviews so you can select the best from the best.&lt;/p&gt;</description>
     </item>
     

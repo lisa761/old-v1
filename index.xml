@@ -2,138 +2,138 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lisa Chandra</title>
-    <link>https://lisa761.github.io/</link>
+    <link>https://lisa761.github.io/old-v1/</link>
     <description>Recent content on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://lisa761.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lisa761.github.io/old-v1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>GSoC Week: 11 and 12</title>
-      <link>https://lisa761.github.io/2020/08/gsoc-week-11-and-12/</link>
+      <link>https://lisa761.github.io/old-v1/2020/08/gsoc-week-11-and-12/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/08/gsoc-week-11-and-12/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/08/gsoc-week-11-and-12/</guid>
       <description>&lt;p&gt;These two weeks, I worked on the additional suggested changes for Infinite Scrolling.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 10</title>
-      <link>https://lisa761.github.io/2020/08/gsoc-week-10/</link>
+      <link>https://lisa761.github.io/old-v1/2020/08/gsoc-week-10/</link>
       <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/08/gsoc-week-10/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/08/gsoc-week-10/</guid>
       <description>&lt;p&gt;This week, I worked on finishing up and testing out the infinite scroll PR.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 9</title>
-      <link>https://lisa761.github.io/2020/08/gsoc-week-9/</link>
+      <link>https://lisa761.github.io/old-v1/2020/08/gsoc-week-9/</link>
       <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/08/gsoc-week-9/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/08/gsoc-week-9/</guid>
       <description>&lt;p&gt;This week, I started working on restructuring the Facets into a class based structure with inheritance.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 8</title>
-      <link>https://lisa761.github.io/2020/07/gsoc-week-8/</link>
+      <link>https://lisa761.github.io/old-v1/2020/07/gsoc-week-8/</link>
       <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/07/gsoc-week-8/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/07/gsoc-week-8/</guid>
       <description>&lt;p&gt;This week I worked on fixing the code for records mode.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 7</title>
-      <link>https://lisa761.github.io/2020/07/gsoc-week-7/</link>
+      <link>https://lisa761.github.io/old-v1/2020/07/gsoc-week-7/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/07/gsoc-week-7/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/07/gsoc-week-7/</guid>
       <description>&lt;p&gt;I spent this week working on the rendering functions. Since these functions take up the most time during the loading of rows, it was important to make them as efficient as is possible.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 6</title>
-      <link>https://lisa761.github.io/2020/07/gsoc-week-6/</link>
+      <link>https://lisa761.github.io/old-v1/2020/07/gsoc-week-6/</link>
       <pubDate>Sun, 12 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/07/gsoc-week-6/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/07/gsoc-week-6/</guid>
       <description>&lt;p&gt;This week, I spent time working on the reset of the scroll bar position while doing facets. The intention is to avoid resetting in cases where the data set does not change.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 5</title>
-      <link>https://lisa761.github.io/2020/07/gsoc-week-5/</link>
+      <link>https://lisa761.github.io/old-v1/2020/07/gsoc-week-5/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/07/gsoc-week-5/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/07/gsoc-week-5/</guid>
       <description>&lt;p&gt;This week, I focused more on integrating and seeing benefits of the intersection API along with looking at rendering functions and facets.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 4</title>
-      <link>https://lisa761.github.io/2020/06/gsoc-week-4/</link>
+      <link>https://lisa761.github.io/old-v1/2020/06/gsoc-week-4/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/06/gsoc-week-4/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/06/gsoc-week-4/</guid>
       <description>&lt;p&gt;The focus for the end of this week was to get ready with a basic prototype that can be released to the users. Therefore, most of the work was testing and finding bugs in the current working code.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 3 Part-II</title>
-      <link>https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/</link>
+      <link>https://lisa761.github.io/old-v1/2020/06/gsoc-week-3-part-ii/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/06/gsoc-week-3-part-ii/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/06/gsoc-week-3-part-ii/</guid>
       <description>&lt;p&gt;The normal upwards scrolling and the virtual scroll, both go hand in hand.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 3 Part-I</title>
-      <link>https://lisa761.github.io/2020/06/gsoc-week-3-part-i/</link>
+      <link>https://lisa761.github.io/old-v1/2020/06/gsoc-week-3-part-i/</link>
       <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/06/gsoc-week-3-part-i/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/06/gsoc-week-3-part-i/</guid>
       <description>&lt;p&gt;This week, I started working on the faster scrolling aspect. This was closely related to virtual scrolling, so it was time I got into that as well.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 2</title>
-      <link>https://lisa761.github.io/2020/06/gsoc-week-2/</link>
+      <link>https://lisa761.github.io/old-v1/2020/06/gsoc-week-2/</link>
       <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/06/gsoc-week-2/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/06/gsoc-week-2/</guid>
       <description>&lt;p&gt;This week, I looked into alternative options for some of the functionalities, fixed a few bugs with the code, and finished up the Table Refactoring.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC Week: 1</title>
-      <link>https://lisa761.github.io/2020/06/gsoc-week-1/</link>
+      <link>https://lisa761.github.io/old-v1/2020/06/gsoc-week-1/</link>
       <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/06/gsoc-week-1/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/06/gsoc-week-1/</guid>
       <description>&lt;p&gt;In the first week of the coding period, I spent more time studying for my end semester exams than working on the project itself. But I did work on clearing up some things that I had finished up beforehand.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>GSoC 2020</title>
-      <link>https://lisa761.github.io/2020/05/gsoc-2020/</link>
+      <link>https://lisa761.github.io/old-v1/2020/05/gsoc-2020/</link>
       <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2020/05/gsoc-2020/</guid>
+      <guid>https://lisa761.github.io/old-v1/2020/05/gsoc-2020/</guid>
       <description>&lt;p&gt;This blog covers my journey of getting selected for Google Summer of Code 2020.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>CovidAssist</title>
-      <link>https://lisa761.github.io/under-work/covidassist/</link>
+      <link>https://lisa761.github.io/old-v1/under-work/covidassist/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/under-work/covidassist/</guid>
+      <guid>https://lisa761.github.io/old-v1/under-work/covidassist/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Tranquilpeak integrate a unique &amp;ldquo;cover image&amp;rdquo; feature. Open this post to see how this feature sublimate your article.&lt;/p&gt;</description>
@@ -141,56 +141,56 @@
     
     <item>
       <title>YelpCamp</title>
-      <link>https://lisa761.github.io/2019/11/yelpcamp/</link>
+      <link>https://lisa761.github.io/old-v1/2019/11/yelpcamp/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2019/11/yelpcamp/</guid>
+      <guid>https://lisa761.github.io/old-v1/2019/11/yelpcamp/</guid>
       <description>&lt;p&gt;A website that brings together all available campgrounds with user reviews so you can select the best from the best.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Blog App</title>
-      <link>https://lisa761.github.io/2019/11/blog-app/</link>
+      <link>https://lisa761.github.io/old-v1/2019/11/blog-app/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2019/11/blog-app/</guid>
+      <guid>https://lisa761.github.io/old-v1/2019/11/blog-app/</guid>
       <description>&lt;p&gt;A web application that implements RESTful routing to maintain your Blogs. You can create/edit/delete/update your blog whenever you wish to, on the click of a button.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Todo List</title>
-      <link>https://lisa761.github.io/2019/10/todo-list/</link>
+      <link>https://lisa761.github.io/old-v1/2019/10/todo-list/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2019/10/todo-list/</guid>
+      <guid>https://lisa761.github.io/old-v1/2019/10/todo-list/</guid>
       <description>&lt;p&gt;A To-do List web application integrated with a database, to keep track of all your tasks.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Patatap Clone</title>
-      <link>https://lisa761.github.io/2019/10/patatap-clone/</link>
+      <link>https://lisa761.github.io/old-v1/2019/10/patatap-clone/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/2019/10/patatap-clone/</guid>
+      <guid>https://lisa761.github.io/old-v1/2019/10/patatap-clone/</guid>
       <description>&lt;p&gt;Patatap is a portable animation and sound kit. With the touch of a finger, you can create melodies charged with moving shapes.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://lisa761.github.io/about/</link>
+      <link>https://lisa761.github.io/old-v1/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/about/</guid>
+      <guid>https://lisa761.github.io/old-v1/about/</guid>
       <description>About Me I am a second-year undergraduate, pursuing Computer Science Engineering at Indira Gandhi Delhi Technical University for Women.
 I have a fair amount of experience with web development and have used it to create several projects. I also have a keen interest in Machine Learning and Artificial Intelligence and am actively working to learn more about them as I go. I constantly push myself to learn more and do better.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://lisa761.github.io/under-work/dark-mode/</link>
+      <link>https://lisa761.github.io/old-v1/under-work/dark-mode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/under-work/dark-mode/</guid>
+      <guid>https://lisa761.github.io/old-v1/under-work/dark-mode/</guid>
       <description>https://ryanfeigenbaum.com/dark-mode/ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties https://codepen.io/ananyaneogi/pen/zXZyMP?__cf_chl_jschl_tk__=7abfe2f19d06c13f4ad4db411ddcb02d0fcaa12d-1590048986-0-AbM3yk1QyI6wI6e-T447auGOiHes5J_KP5dRNLVto8rM_pIAlckzL9E4cJTWx9-_vxGlm3qTLW27CfE8upJ1yBNjIsAgRbX-RbOkPg4jKeYZd_c9WnteuoA73iWLvADTgQgjh-l8ja_9aTei0hmkS6p3crBhb5zoQjyXIcWZyy_0ze3icS0v3zJ23_UcE-91FUY4QxBKUhu3alzIrETI2dppA6s9RR9RmNl00zKMKH6ngkBM3wph7oMhWrbQo5_rCo_5NQzZNbW263a317quVY_V46vcaMXWdZdINFX0iD78FN7dhN48OOGt8zXXl2Wi06oAcQzMqvhatc_OPCTKxGoTNhdr1uES9050zfLQSEqx
 https://stackoverflow.com/questions/13656890/how-to-break-current-iteration-and-continue-with-next-iteration-within-setinterv https://stackoverflow.com/questions/5004978/check-if-page-gets-reloaded-or-refreshed-in-javascript</description>
     </item>

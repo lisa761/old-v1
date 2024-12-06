@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>app on Lisa Chandra</title>
-    <link>https://lisa761.github.io/tags/app/</link>
+    <link>https://lisa761.github.io/old-v1/tags/app/</link>
     <description>Recent content in app on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://lisa761.github.io/tags/app/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lisa761.github.io/old-v1/tags/app/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://lisa761.github.io/about/</link>
+      <link>https://lisa761.github.io/old-v1/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/about/</guid>
+      <guid>https://lisa761.github.io/old-v1/about/</guid>
       <description>About Me I am a second-year undergraduate, pursuing Computer Science Engineering at Indira Gandhi Delhi Technical University for Women.
 I have a fair amount of experience with web development and have used it to create several projects. I also have a keen interest in Machine Learning and Artificial Intelligence and am actively working to learn more about them as I go. I constantly push myself to learn more and do better.</description>
     </item>

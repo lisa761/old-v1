@@ -2,156 +2,156 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lisa Chandra</title>
-    <link>https://lisa761.github.io/tags/</link>
+    <link>https://lisa761.github.io/old-v1/tags/</link>
     <description>Recent content in Tags on Lisa Chandra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://lisa761.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lisa761.github.io/old-v1/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>gsoc</title>
-      <link>https://lisa761.github.io/tags/gsoc/</link>
+      <link>https://lisa761.github.io/old-v1/tags/gsoc/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/gsoc/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/gsoc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>openrefine</title>
-      <link>https://lisa761.github.io/tags/openrefine/</link>
+      <link>https://lisa761.github.io/old-v1/tags/openrefine/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/openrefine/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/openrefine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>opensource</title>
-      <link>https://lisa761.github.io/tags/opensource/</link>
+      <link>https://lisa761.github.io/old-v1/tags/opensource/</link>
       <pubDate>Sun, 23 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/opensource/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/opensource/</guid>
       <description></description>
     </item>
     
     <item>
       <title>authentication</title>
-      <link>https://lisa761.github.io/tags/authentication/</link>
+      <link>https://lisa761.github.io/old-v1/tags/authentication/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/authentication/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/authentication/</guid>
       <description></description>
     </item>
     
     <item>
       <title>authorization</title>
-      <link>https://lisa761.github.io/tags/authorization/</link>
+      <link>https://lisa761.github.io/old-v1/tags/authorization/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/authorization/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/authorization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>express</title>
-      <link>https://lisa761.github.io/tags/express/</link>
+      <link>https://lisa761.github.io/old-v1/tags/express/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/express/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/express/</guid>
       <description></description>
     </item>
     
     <item>
       <title>javascript</title>
-      <link>https://lisa761.github.io/tags/javascript/</link>
+      <link>https://lisa761.github.io/old-v1/tags/javascript/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/javascript/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nodejs</title>
-      <link>https://lisa761.github.io/tags/nodejs/</link>
+      <link>https://lisa761.github.io/old-v1/tags/nodejs/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/nodejs/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/nodejs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>session</title>
-      <link>https://lisa761.github.io/tags/session/</link>
+      <link>https://lisa761.github.io/old-v1/tags/session/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/session/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/session/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web</title>
-      <link>https://lisa761.github.io/tags/web/</link>
+      <link>https://lisa761.github.io/old-v1/tags/web/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/web/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>database</title>
-      <link>https://lisa761.github.io/tags/database/</link>
+      <link>https://lisa761.github.io/old-v1/tags/database/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/database/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/database/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mongoose</title>
-      <link>https://lisa761.github.io/tags/mongoose/</link>
+      <link>https://lisa761.github.io/old-v1/tags/mongoose/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/mongoose/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/mongoose/</guid>
       <description></description>
     </item>
     
     <item>
       <title>REST</title>
-      <link>https://lisa761.github.io/tags/rest/</link>
+      <link>https://lisa761.github.io/old-v1/tags/rest/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/rest/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/rest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>semantic-ui</title>
-      <link>https://lisa761.github.io/tags/semantic-ui/</link>
+      <link>https://lisa761.github.io/old-v1/tags/semantic-ui/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/semantic-ui/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/semantic-ui/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jQuery</title>
-      <link>https://lisa761.github.io/tags/jquery/</link>
+      <link>https://lisa761.github.io/old-v1/tags/jquery/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/jquery/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/jquery/</guid>
       <description></description>
     </item>
     
     <item>
       <title>app</title>
-      <link>https://lisa761.github.io/tags/app/</link>
+      <link>https://lisa761.github.io/old-v1/tags/app/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lisa761.github.io/tags/app/</guid>
+      <guid>https://lisa761.github.io/old-v1/tags/app/</guid>
       <description></description>
     </item>
     
